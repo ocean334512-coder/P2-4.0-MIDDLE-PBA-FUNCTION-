@@ -16,7 +16,7 @@ namespace _20260202_P2_MIDDLE
         {
             if (disposing && (components != null))
             {
-                components.Dispose();
+                //components.Dispose();
             }
             base.Dispose(disposing);
         }

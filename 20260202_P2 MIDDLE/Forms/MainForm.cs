@@ -274,9 +274,9 @@ namespace _20260202_P2_MIDDLE
             }
         }
 
-        private void btnRecipeSettingsOpen_Click(object sender, EventArgs e)
-        {
-        }
+       // private void btnRecipeSettingsOpen_Click(object sender, EventArgs e)
+        //{
+        //}
 
         private void tableLayoutPanel2_Paint_1(object sender, PaintEventArgs e)
         {
