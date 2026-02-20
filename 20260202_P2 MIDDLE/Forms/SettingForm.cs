@@ -156,14 +156,14 @@ namespace _20260202_P2_MIDDLE.Forms
                 data.Con3Rows = GetGridData(dataGridView3);
 
                 // Test Items 체크박스
-                data.PressureUse = chbPressueUse.Checked;
+                data.PressureUse = checkBox7.Checked;
                 data.McOpen = chbMcOpen.Checked;
                 data.McShort = chbMcShort.Checked;
                 data.TcOpen = chbTcOpen.Checked;
                 data.TcShort = chbTcShort.Checked;
                 data.CcOpen = chbCcOpen.Checked;
                 data.CcShort = chbCcShort.Checked;
-                data.CpUse = chbCpUse.Checked;
+                data.CpUse = checkBox1.Checked;
 
                 // SPEC 값
                 data.PressureMin = (int)nudPressureMin.Value;
@@ -228,14 +228,14 @@ namespace _20260202_P2_MIDDLE.Forms
                 RestoreGridData(dataGridView3, data.Con3Rows);
 
                 // Test Items 체크박스 복원
-                chbPressueUse.Checked = data.PressureUse;
+                checkBox7.Checked = data.PressureUse;
                 chbMcOpen.Checked = data.McOpen;
                 chbMcShort.Checked = data.McShort;
                 chbTcOpen.Checked = data.TcOpen;
                 chbTcShort.Checked = data.TcShort;
                 chbCcOpen.Checked = data.CcOpen;
                 chbCcShort.Checked = data.CcShort;
-                chbCpUse.Checked = data.CpUse;
+                checkBox1.Checked = data.CpUse;
 
                 // SPEC 값 복원
                 nudPressureMin.Value = data.PressureMin;

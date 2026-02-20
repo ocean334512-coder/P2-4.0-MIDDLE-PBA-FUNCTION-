@@ -58,20 +58,39 @@ namespace _20260202_P2_MIDDLE.Forms
             this.BtnCon1Set = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.chbCpUse = new System.Windows.Forms.CheckBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.chbCcShort = new System.Windows.Forms.CheckBox();
-            this.chbCcOpen = new System.Windows.Forms.CheckBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.chbTcShort = new System.Windows.Forms.CheckBox();
-            this.chbTcOpen = new System.Windows.Forms.CheckBox();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.grbOSTest = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.chbMcShort = new System.Windows.Forms.CheckBox();
             this.chbMcOpen = new System.Windows.Forms.CheckBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.chbPressueUse = new System.Windows.Forms.CheckBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.chbTcShort = new System.Windows.Forms.CheckBox();
+            this.chbTcOpen = new System.Windows.Forms.CheckBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.chbCcShort = new System.Windows.Forms.CheckBox();
+            this.chbCcOpen = new System.Windows.Forms.CheckBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.nudC208Max = new System.Windows.Forms.NumericUpDown();
+            this.nudC208Min = new System.Windows.Forms.NumericUpDown();
+            this.label29 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.nudL201Max = new System.Windows.Forms.NumericUpDown();
             this.nudL201Min = new System.Windows.Forms.NumericUpDown();
@@ -118,10 +137,6 @@ namespace _20260202_P2_MIDDLE.Forms
             this.nudPressureMax = new System.Windows.Forms.NumericUpDown();
             this.nudPressureMin = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.nudC208Max = new System.Windows.Forms.NumericUpDown();
-            this.nudC208Min = new System.Windows.Forms.NumericUpDown();
-            this.label29 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -133,12 +148,22 @@ namespace _20260202_P2_MIDDLE.Forms
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberCon1)).BeginInit();
             this.groupBox4.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.groupBox8.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.grbOSTest.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudC208Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudC208Min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudL201Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudL201Min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudC207Max)).BeginInit();
@@ -161,8 +186,6 @@ namespace _20260202_P2_MIDDLE.Forms
             ((System.ComponentModel.ISupportInitialize)(this.nudR202Min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPressureMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPressureMin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC208Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC208Min)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -172,9 +195,9 @@ namespace _20260202_P2_MIDDLE.Forms
             this.groupBox3.Controls.Add(this.groupBox1);
             this.groupBox3.Controls.Add(this.GboxCon1);
             this.groupBox3.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox3.Location = new System.Drawing.Point(578, 322);
+            this.groupBox3.Location = new System.Drawing.Point(25, 304);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(2403, 931);
+            this.groupBox3.Size = new System.Drawing.Size(2403, 950);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Open/Short";
@@ -457,108 +480,212 @@ namespace _20260202_P2_MIDDLE.Forms
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.groupBox10);
-            this.groupBox4.Controls.Add(this.groupBox9);
-            this.groupBox4.Controls.Add(this.groupBox8);
-            this.groupBox4.Controls.Add(this.groupBox7);
-            this.groupBox4.Controls.Add(this.groupBox6);
+            this.groupBox4.Controls.Add(this.groupBox18);
+            this.groupBox4.Controls.Add(this.groupBox16);
+            this.groupBox4.Controls.Add(this.groupBox14);
+            this.groupBox4.Controls.Add(this.groupBox12);
+            this.groupBox4.Controls.Add(this.grbOSTest);
+            this.groupBox4.Controls.Add(this.groupBox11);
             this.groupBox4.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox4.Location = new System.Drawing.Point(25, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(987, 286);
+            this.groupBox4.Size = new System.Drawing.Size(2403, 286);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Test Items";
             // 
-            // groupBox10
+            // groupBox18
             // 
-            this.groupBox10.Controls.Add(this.chbCpUse);
-            this.groupBox10.Location = new System.Drawing.Point(717, 48);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(230, 221);
-            this.groupBox10.TabIndex = 13;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "COMPONENT";
+            this.groupBox18.Controls.Add(this.groupBox19);
+            this.groupBox18.Location = new System.Drawing.Point(1473, 35);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(288, 245);
+            this.groupBox18.TabIndex = 19;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "ADC VOLATE";
             // 
-            // chbCpUse
+            // groupBox19
             // 
-            this.chbCpUse.AutoSize = true;
-            this.chbCpUse.Location = new System.Drawing.Point(6, 44);
-            this.chbCpUse.Name = "chbCpUse";
-            this.chbCpUse.Size = new System.Drawing.Size(75, 32);
-            this.chbCpUse.TabIndex = 2;
-            this.chbCpUse.Text = "USE";
-            this.chbCpUse.UseVisualStyleBackColor = true;
+            this.groupBox19.Controls.Add(this.checkBox9);
+            this.groupBox19.Controls.Add(this.checkBox8);
+            this.groupBox19.Controls.Add(this.checkBox6);
+            this.groupBox19.Location = new System.Drawing.Point(6, 48);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(254, 191);
+            this.groupBox19.TabIndex = 14;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "VOLT";
             // 
-            // groupBox9
+            // checkBox9
             // 
-            this.groupBox9.Controls.Add(this.chbCcShort);
-            this.groupBox9.Controls.Add(this.chbCcOpen);
-            this.groupBox9.Location = new System.Drawing.Point(481, 48);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(230, 221);
-            this.groupBox9.TabIndex = 12;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "CARTRIDGE CON";
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.checkBox9.Location = new System.Drawing.Point(6, 120);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(107, 32);
+            this.checkBox9.TabIndex = 4;
+            this.checkBox9.Text = "DIODE2";
+            this.checkBox9.UseVisualStyleBackColor = true;
             // 
-            // chbCcShort
+            // checkBox8
             // 
-            this.chbCcShort.AutoSize = true;
-            this.chbCcShort.Location = new System.Drawing.Point(6, 44);
-            this.chbCcShort.Name = "chbCcShort";
-            this.chbCcShort.Size = new System.Drawing.Size(105, 32);
-            this.chbCcShort.TabIndex = 2;
-            this.chbCcShort.Text = "SHORT";
-            this.chbCcShort.UseVisualStyleBackColor = true;
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.checkBox8.Location = new System.Drawing.Point(6, 82);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(107, 32);
+            this.checkBox8.TabIndex = 3;
+            this.checkBox8.Text = "DIODE1";
+            this.checkBox8.UseVisualStyleBackColor = true;
             // 
-            // chbCcOpen
+            // checkBox6
             // 
-            this.chbCcOpen.AutoSize = true;
-            this.chbCcOpen.Location = new System.Drawing.Point(6, 82);
-            this.chbCcOpen.Name = "chbCcOpen";
-            this.chbCcOpen.Size = new System.Drawing.Size(93, 32);
-            this.chbCcOpen.TabIndex = 1;
-            this.chbCcOpen.Text = "OPEN";
-            this.chbCcOpen.UseVisualStyleBackColor = true;
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.checkBox6.Location = new System.Drawing.Point(6, 44);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(72, 32);
+            this.checkBox6.TabIndex = 2;
+            this.checkBox6.Text = "LED";
+            this.checkBox6.UseVisualStyleBackColor = true;
             // 
-            // groupBox8
+            // groupBox16
             // 
-            this.groupBox8.Controls.Add(this.chbTcShort);
-            this.groupBox8.Controls.Add(this.chbTcOpen);
-            this.groupBox8.Location = new System.Drawing.Point(333, 48);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(142, 221);
-            this.groupBox8.TabIndex = 11;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "TOP CON";
+            this.groupBox16.Controls.Add(this.groupBox17);
+            this.groupBox16.Location = new System.Drawing.Point(1164, 35);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(288, 245);
+            this.groupBox16.TabIndex = 18;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "COLOR SENSOR";
             // 
-            // chbTcShort
+            // groupBox17
             // 
-            this.chbTcShort.AutoSize = true;
-            this.chbTcShort.Location = new System.Drawing.Point(6, 44);
-            this.chbTcShort.Name = "chbTcShort";
-            this.chbTcShort.Size = new System.Drawing.Size(105, 32);
-            this.chbTcShort.TabIndex = 2;
-            this.chbTcShort.Text = "SHORT";
-            this.chbTcShort.UseVisualStyleBackColor = true;
+            this.groupBox17.Controls.Add(this.checkBox5);
+            this.groupBox17.Location = new System.Drawing.Point(6, 48);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(276, 191);
+            this.groupBox17.TabIndex = 14;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "I2C";
             // 
-            // chbTcOpen
+            // checkBox5
             // 
-            this.chbTcOpen.AutoSize = true;
-            this.chbTcOpen.Location = new System.Drawing.Point(6, 82);
-            this.chbTcOpen.Name = "chbTcOpen";
-            this.chbTcOpen.Size = new System.Drawing.Size(93, 32);
-            this.chbTcOpen.TabIndex = 1;
-            this.chbTcOpen.Text = "OPEN";
-            this.chbTcOpen.UseVisualStyleBackColor = true;
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.checkBox5.Location = new System.Drawing.Point(6, 44);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(242, 32);
+            this.checkBox5.TabIndex = 2;
+            this.checkBox5.Text = "COLOR SENSOR DATA";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.groupBox15);
+            this.groupBox14.Location = new System.Drawing.Point(884, 35);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(264, 245);
+            this.groupBox14.TabIndex = 17;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "PRESSURE SENSOR";
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.checkBox7);
+            this.groupBox15.Location = new System.Drawing.Point(6, 48);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(230, 191);
+            this.groupBox15.TabIndex = 14;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "I2C";
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.checkBox7.Location = new System.Drawing.Point(6, 44);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(187, 32);
+            this.checkBox7.TabIndex = 2;
+            this.checkBox7.Text = "PRESSURE DATA";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.groupBox13);
+            this.groupBox12.Location = new System.Drawing.Point(603, 35);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(264, 245);
+            this.groupBox12.TabIndex = 16;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "COMPONENT";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.checkBox4);
+            this.groupBox13.Controls.Add(this.checkBox3);
+            this.groupBox13.Controls.Add(this.checkBox2);
+            this.groupBox13.Location = new System.Drawing.Point(6, 48);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(230, 191);
+            this.groupBox13.TabIndex = 14;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "RLC";
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.checkBox4.Location = new System.Drawing.Point(6, 120);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(51, 32);
+            this.checkBox4.TabIndex = 4;
+            this.checkBox4.Text = "C";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.checkBox3.Location = new System.Drawing.Point(6, 82);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(48, 32);
+            this.checkBox3.TabIndex = 3;
+            this.checkBox3.Text = "L";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.checkBox2.Location = new System.Drawing.Point(6, 44);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(50, 32);
+            this.checkBox2.TabIndex = 2;
+            this.checkBox2.Text = "R";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // grbOSTest
+            // 
+            this.grbOSTest.Controls.Add(this.groupBox7);
+            this.grbOSTest.Controls.Add(this.groupBox8);
+            this.grbOSTest.Controls.Add(this.groupBox9);
+            this.grbOSTest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.grbOSTest.Location = new System.Drawing.Point(6, 35);
+            this.grbOSTest.Name = "grbOSTest";
+            this.grbOSTest.Size = new System.Drawing.Size(582, 245);
+            this.grbOSTest.TabIndex = 15;
+            this.grbOSTest.TabStop = false;
+            this.grbOSTest.Text = "O/S TEST";
             // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.chbMcShort);
             this.groupBox7.Controls.Add(this.chbMcOpen);
-            this.groupBox7.Location = new System.Drawing.Point(185, 48);
+            this.groupBox7.Location = new System.Drawing.Point(6, 48);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(142, 221);
+            this.groupBox7.Size = new System.Drawing.Size(142, 191);
             this.groupBox7.TabIndex = 10;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "MAIN CON";
@@ -566,9 +693,10 @@ namespace _20260202_P2_MIDDLE.Forms
             // chbMcShort
             // 
             this.chbMcShort.AutoSize = true;
+            this.chbMcShort.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.chbMcShort.Location = new System.Drawing.Point(6, 44);
             this.chbMcShort.Name = "chbMcShort";
-            this.chbMcShort.Size = new System.Drawing.Size(105, 32);
+            this.chbMcShort.Size = new System.Drawing.Size(101, 32);
             this.chbMcShort.TabIndex = 2;
             this.chbMcShort.Text = "SHORT";
             this.chbMcShort.UseVisualStyleBackColor = true;
@@ -576,32 +704,100 @@ namespace _20260202_P2_MIDDLE.Forms
             // chbMcOpen
             // 
             this.chbMcOpen.AutoSize = true;
+            this.chbMcOpen.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.chbMcOpen.Location = new System.Drawing.Point(6, 82);
             this.chbMcOpen.Name = "chbMcOpen";
-            this.chbMcOpen.Size = new System.Drawing.Size(93, 32);
+            this.chbMcOpen.Size = new System.Drawing.Size(89, 32);
             this.chbMcOpen.TabIndex = 1;
             this.chbMcOpen.Text = "OPEN";
             this.chbMcOpen.UseVisualStyleBackColor = true;
             // 
-            // groupBox6
+            // groupBox8
             // 
-            this.groupBox6.Controls.Add(this.chbPressueUse);
-            this.groupBox6.Location = new System.Drawing.Point(20, 48);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(159, 221);
-            this.groupBox6.TabIndex = 9;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "PRESSURE";
+            this.groupBox8.Controls.Add(this.chbTcShort);
+            this.groupBox8.Controls.Add(this.chbTcOpen);
+            this.groupBox8.Location = new System.Drawing.Point(165, 48);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(142, 191);
+            this.groupBox8.TabIndex = 11;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "TOP CON";
             // 
-            // chbPressueUse
+            // chbTcShort
             // 
-            this.chbPressueUse.AutoSize = true;
-            this.chbPressueUse.Location = new System.Drawing.Point(16, 44);
-            this.chbPressueUse.Name = "chbPressueUse";
-            this.chbPressueUse.Size = new System.Drawing.Size(75, 32);
-            this.chbPressueUse.TabIndex = 1;
-            this.chbPressueUse.Text = "USE";
-            this.chbPressueUse.UseVisualStyleBackColor = true;
+            this.chbTcShort.AutoSize = true;
+            this.chbTcShort.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.chbTcShort.Location = new System.Drawing.Point(6, 44);
+            this.chbTcShort.Name = "chbTcShort";
+            this.chbTcShort.Size = new System.Drawing.Size(101, 32);
+            this.chbTcShort.TabIndex = 2;
+            this.chbTcShort.Text = "SHORT";
+            this.chbTcShort.UseVisualStyleBackColor = true;
+            // 
+            // chbTcOpen
+            // 
+            this.chbTcOpen.AutoSize = true;
+            this.chbTcOpen.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.chbTcOpen.Location = new System.Drawing.Point(6, 82);
+            this.chbTcOpen.Name = "chbTcOpen";
+            this.chbTcOpen.Size = new System.Drawing.Size(89, 32);
+            this.chbTcOpen.TabIndex = 1;
+            this.chbTcOpen.Text = "OPEN";
+            this.chbTcOpen.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.chbCcShort);
+            this.groupBox9.Controls.Add(this.chbCcOpen);
+            this.groupBox9.Location = new System.Drawing.Point(325, 48);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(237, 191);
+            this.groupBox9.TabIndex = 12;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "CARTRIDGE CON";
+            // 
+            // chbCcShort
+            // 
+            this.chbCcShort.AutoSize = true;
+            this.chbCcShort.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.chbCcShort.Location = new System.Drawing.Point(6, 44);
+            this.chbCcShort.Name = "chbCcShort";
+            this.chbCcShort.Size = new System.Drawing.Size(101, 32);
+            this.chbCcShort.TabIndex = 2;
+            this.chbCcShort.Text = "SHORT";
+            this.chbCcShort.UseVisualStyleBackColor = true;
+            // 
+            // chbCcOpen
+            // 
+            this.chbCcOpen.AutoSize = true;
+            this.chbCcOpen.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.chbCcOpen.Location = new System.Drawing.Point(6, 82);
+            this.chbCcOpen.Name = "chbCcOpen";
+            this.chbCcOpen.Size = new System.Drawing.Size(89, 32);
+            this.chbCcOpen.TabIndex = 1;
+            this.chbCcOpen.Text = "OPEN";
+            this.chbCcOpen.UseVisualStyleBackColor = true;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.checkBox1);
+            this.groupBox11.Location = new System.Drawing.Point(2590, 59);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(230, 221);
+            this.groupBox11.TabIndex = 14;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "COMPONENT";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.checkBox1.Location = new System.Drawing.Point(6, 44);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(73, 32);
+            this.checkBox1.TabIndex = 2;
+            this.checkBox1.Text = "USE";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -656,13 +852,56 @@ namespace _20260202_P2_MIDDLE.Forms
             this.groupBox5.Controls.Add(this.nudPressureMax);
             this.groupBox5.Controls.Add(this.nudPressureMin);
             this.groupBox5.Controls.Add(this.label4);
+            this.groupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox5.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox5.Location = new System.Drawing.Point(25, 322);
+            this.groupBox5.Location = new System.Drawing.Point(2444, 24);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(535, 931);
+            this.groupBox5.Size = new System.Drawing.Size(535, 1230);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "SPEC";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(353, 464);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(26, 28);
+            this.label28.TabIndex = 51;
+            this.label28.Text = "~";
+            // 
+            // nudC208Max
+            // 
+            this.nudC208Max.Location = new System.Drawing.Point(393, 464);
+            this.nudC208Max.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudC208Max.Name = "nudC208Max";
+            this.nudC208Max.Size = new System.Drawing.Size(120, 34);
+            this.nudC208Max.TabIndex = 50;
+            // 
+            // nudC208Min
+            // 
+            this.nudC208Min.Location = new System.Drawing.Point(207, 464);
+            this.nudC208Min.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudC208Min.Name = "nudC208Min";
+            this.nudC208Min.Size = new System.Drawing.Size(120, 34);
+            this.nudC208Min.TabIndex = 49;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(15, 466);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(61, 28);
+            this.label29.TabIndex = 48;
+            this.label29.Text = "C208";
             // 
             // label26
             // 
@@ -676,16 +915,46 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudL201Max
             // 
             this.nudL201Max.Location = new System.Drawing.Point(393, 504);
+            this.nudL201Max.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudL201Max.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.nudL201Max.Name = "nudL201Max";
             this.nudL201Max.Size = new System.Drawing.Size(120, 34);
             this.nudL201Max.TabIndex = 46;
+            this.nudL201Max.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             // 
             // nudL201Min
             // 
             this.nudL201Min.Location = new System.Drawing.Point(207, 504);
+            this.nudL201Min.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudL201Min.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.nudL201Min.Name = "nudL201Min";
             this.nudL201Min.Size = new System.Drawing.Size(120, 34);
             this.nudL201Min.TabIndex = 45;
+            this.nudL201Min.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             // 
             // label27
             // 
@@ -708,6 +977,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudC207Max
             // 
             this.nudC207Max.Location = new System.Drawing.Point(393, 424);
+            this.nudC207Max.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nudC207Max.Name = "nudC207Max";
             this.nudC207Max.Size = new System.Drawing.Size(120, 34);
             this.nudC207Max.TabIndex = 42;
@@ -715,6 +989,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudC207Min
             // 
             this.nudC207Min.Location = new System.Drawing.Point(207, 424);
+            this.nudC207Min.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nudC207Min.Name = "nudC207Min";
             this.nudC207Min.Size = new System.Drawing.Size(120, 34);
             this.nudC207Min.TabIndex = 41;
@@ -740,6 +1019,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudC204Max
             // 
             this.nudC204Max.Location = new System.Drawing.Point(393, 384);
+            this.nudC204Max.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nudC204Max.Name = "nudC204Max";
             this.nudC204Max.Size = new System.Drawing.Size(120, 34);
             this.nudC204Max.TabIndex = 38;
@@ -747,6 +1031,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudC204Min
             // 
             this.nudC204Min.Location = new System.Drawing.Point(207, 384);
+            this.nudC204Min.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nudC204Min.Name = "nudC204Min";
             this.nudC204Min.Size = new System.Drawing.Size(120, 34);
             this.nudC204Min.TabIndex = 37;
@@ -772,6 +1061,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudC203Max
             // 
             this.nudC203Max.Location = new System.Drawing.Point(393, 344);
+            this.nudC203Max.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nudC203Max.Name = "nudC203Max";
             this.nudC203Max.Size = new System.Drawing.Size(120, 34);
             this.nudC203Max.TabIndex = 34;
@@ -779,6 +1073,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudC203Min
             // 
             this.nudC203Min.Location = new System.Drawing.Point(207, 344);
+            this.nudC203Min.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nudC203Min.Name = "nudC203Min";
             this.nudC203Min.Size = new System.Drawing.Size(120, 34);
             this.nudC203Min.TabIndex = 33;
@@ -804,6 +1103,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudRT201Max
             // 
             this.nudRT201Max.Location = new System.Drawing.Point(393, 304);
+            this.nudRT201Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nudRT201Max.Name = "nudRT201Max";
             this.nudRT201Max.Size = new System.Drawing.Size(120, 34);
             this.nudRT201Max.TabIndex = 30;
@@ -811,6 +1115,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudRT201Min
             // 
             this.nudRT201Min.Location = new System.Drawing.Point(207, 304);
+            this.nudRT201Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nudRT201Min.Name = "nudRT201Min";
             this.nudRT201Min.Size = new System.Drawing.Size(120, 34);
             this.nudRT201Min.TabIndex = 29;
@@ -836,6 +1145,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudR207Max
             // 
             this.nudR207Max.Location = new System.Drawing.Point(393, 264);
+            this.nudR207Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nudR207Max.Name = "nudR207Max";
             this.nudR207Max.Size = new System.Drawing.Size(120, 34);
             this.nudR207Max.TabIndex = 26;
@@ -843,6 +1157,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudR207Min
             // 
             this.nudR207Min.Location = new System.Drawing.Point(207, 264);
+            this.nudR207Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nudR207Min.Name = "nudR207Min";
             this.nudR207Min.Size = new System.Drawing.Size(120, 34);
             this.nudR207Min.TabIndex = 25;
@@ -868,6 +1187,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudR205Max
             // 
             this.nudR205Max.Location = new System.Drawing.Point(393, 224);
+            this.nudR205Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nudR205Max.Name = "nudR205Max";
             this.nudR205Max.Size = new System.Drawing.Size(120, 34);
             this.nudR205Max.TabIndex = 22;
@@ -875,6 +1199,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudR205Min
             // 
             this.nudR205Min.Location = new System.Drawing.Point(207, 224);
+            this.nudR205Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nudR205Min.Name = "nudR205Min";
             this.nudR205Min.Size = new System.Drawing.Size(120, 34);
             this.nudR205Min.TabIndex = 21;
@@ -900,6 +1229,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudR204Max
             // 
             this.nudR204Max.Location = new System.Drawing.Point(393, 184);
+            this.nudR204Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nudR204Max.Name = "nudR204Max";
             this.nudR204Max.Size = new System.Drawing.Size(120, 34);
             this.nudR204Max.TabIndex = 18;
@@ -907,6 +1241,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudR204Min
             // 
             this.nudR204Min.Location = new System.Drawing.Point(207, 184);
+            this.nudR204Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nudR204Min.Name = "nudR204Min";
             this.nudR204Min.Size = new System.Drawing.Size(120, 34);
             this.nudR204Min.TabIndex = 17;
@@ -932,6 +1271,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudR203Max
             // 
             this.nudR203Max.Location = new System.Drawing.Point(393, 144);
+            this.nudR203Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nudR203Max.Name = "nudR203Max";
             this.nudR203Max.Size = new System.Drawing.Size(120, 34);
             this.nudR203Max.TabIndex = 14;
@@ -939,6 +1283,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudR203Min
             // 
             this.nudR203Min.Location = new System.Drawing.Point(207, 144);
+            this.nudR203Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nudR203Min.Name = "nudR203Min";
             this.nudR203Min.Size = new System.Drawing.Size(120, 34);
             this.nudR203Min.TabIndex = 13;
@@ -964,6 +1313,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudR202Max
             // 
             this.nudR202Max.Location = new System.Drawing.Point(393, 104);
+            this.nudR202Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nudR202Max.Name = "nudR202Max";
             this.nudR202Max.Size = new System.Drawing.Size(120, 34);
             this.nudR202Max.TabIndex = 8;
@@ -971,6 +1325,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudR202Min
             // 
             this.nudR202Min.Location = new System.Drawing.Point(207, 104);
+            this.nudR202Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nudR202Min.Name = "nudR202Min";
             this.nudR202Min.Size = new System.Drawing.Size(120, 34);
             this.nudR202Min.TabIndex = 7;
@@ -1014,6 +1373,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudPressureMax
             // 
             this.nudPressureMax.Location = new System.Drawing.Point(393, 64);
+            this.nudPressureMax.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.nudPressureMax.Name = "nudPressureMax";
             this.nudPressureMax.Size = new System.Drawing.Size(120, 34);
             this.nudPressureMax.TabIndex = 2;
@@ -1021,6 +1385,11 @@ namespace _20260202_P2_MIDDLE.Forms
             // nudPressureMin
             // 
             this.nudPressureMin.Location = new System.Drawing.Point(207, 64);
+            this.nudPressureMin.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.nudPressureMin.Name = "nudPressureMin";
             this.nudPressureMin.Size = new System.Drawing.Size(120, 34);
             this.nudPressureMin.TabIndex = 1;
@@ -1033,38 +1402,6 @@ namespace _20260202_P2_MIDDLE.Forms
             this.label4.Size = new System.Drawing.Size(109, 28);
             this.label4.TabIndex = 0;
             this.label4.Text = "PRESSURE";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(353, 464);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(26, 28);
-            this.label28.TabIndex = 51;
-            this.label28.Text = "~";
-            // 
-            // nudC208Max
-            // 
-            this.nudC208Max.Location = new System.Drawing.Point(393, 464);
-            this.nudC208Max.Name = "nudC208Max";
-            this.nudC208Max.Size = new System.Drawing.Size(120, 34);
-            this.nudC208Max.TabIndex = 50;
-            // 
-            // nudC208Min
-            // 
-            this.nudC208Min.Location = new System.Drawing.Point(207, 464);
-            this.nudC208Min.Name = "nudC208Min";
-            this.nudC208Min.Size = new System.Drawing.Size(120, 34);
-            this.nudC208Min.TabIndex = 49;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(15, 466);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(61, 28);
-            this.label29.TabIndex = 48;
-            this.label29.Text = "C208";
             // 
             // RecipeSettingForm
             // 
@@ -1090,18 +1427,31 @@ namespace _20260202_P2_MIDDLE.Forms
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberCon1)).EndInit();
             this.groupBox4.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            this.grbOSTest.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudC208Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudC208Min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudL201Max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudL201Min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudC207Max)).EndInit();
@@ -1124,8 +1474,6 @@ namespace _20260202_P2_MIDDLE.Forms
             ((System.ComponentModel.ISupportInitialize)(this.nudR202Min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPressureMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPressureMin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC208Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC208Min)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1161,10 +1509,6 @@ namespace _20260202_P2_MIDDLE.Forms
         private System.Windows.Forms.Button BtnCon1Set;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.CheckBox chbPressueUse;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.CheckBox chbCpUse;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.CheckBox chbCcShort;
         private System.Windows.Forms.CheckBox chbCcOpen;
@@ -1174,7 +1518,6 @@ namespace _20260202_P2_MIDDLE.Forms
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.CheckBox chbMcShort;
         private System.Windows.Forms.CheckBox chbMcOpen;
-        private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.NumericUpDown nudL201Max;
         private System.Windows.Forms.NumericUpDown nudL201Min;
@@ -1225,5 +1568,25 @@ namespace _20260202_P2_MIDDLE.Forms
         private System.Windows.Forms.NumericUpDown nudC208Max;
         private System.Windows.Forms.NumericUpDown nudC208Min;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.GroupBox grbOSTest;
+        internal System.Windows.Forms.GroupBox groupBox5;
     }
 }
