@@ -100,7 +100,7 @@ namespace _20260202_P2_MIDDLE
                 0, 600, 600, 600, 600, 600, 600, 600, 11000, 9000, 110, 4
             });
 
-            // SPEC 행 스타일 (연녹색 배경, 읽기전용 느낌)
+            // SPEC 행 스타일 (연녹색 배경, 낮은 높이)
             var specStyle = new DataGridViewCellStyle
             {
                 BackColor = Color.FromArgb(220, 235, 220),
@@ -108,9 +108,19 @@ namespace _20260202_P2_MIDDLE
             };
             dgv.Rows[minRow].DefaultCellStyle = specStyle;
             dgv.Rows[maxRow].DefaultCellStyle = specStyle;
+            dgv.Rows[minRow].Height = 25;
+            dgv.Rows[maxRow].Height = 25;
 
             // ===== CH 데이터 행 추가 =====
             dgv.Rows.Add("CH1", "");
+
+            // CH1 행: 남은 공간 전부 차지
+            int specTotalHeight = dgv.Rows[minRow].Height + dgv.Rows[maxRow].Height;
+            int availableForCh = dgv.ClientSize.Height - dgv.ColumnHeadersHeight - specTotalHeight;
+            if (availableForCh > 40)
+                dgv.Rows[dgv.Rows.Count - 1].Height = availableForCh;
+            else
+                dgv.Rows[dgv.Rows.Count - 1].Height = 40;
 
             // ===== 이벤트 등록 =====
             dgv.CellPainting += DgvTaskList_CellPainting;
@@ -146,6 +156,36 @@ namespace _20260202_P2_MIDDLE
         /// </summary>
         private void DgvTaskList_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
+            var dgv = dgvTaskList;
+
+            // ===== SPEC 행 colItem 병합 (행 0,1의 첫 번째 열) =====
+            if (e.ColumnIndex == 0 && (e.RowIndex == 0 || e.RowIndex == 1))
+            {
+                e.Handled = true;
+
+                if (e.RowIndex == 0)
+                {
+                    // MIN 행: "SPEC" 텍스트를 두 행에 걸쳐 그리기
+                    var cellRect = e.CellBounds;
+                    int row1Height = dgv.Rows[1].Height;
+                    var mergedRect = new Rectangle(cellRect.X, cellRect.Y, cellRect.Width, cellRect.Height + row1Height);
+
+                    using (var bgBrush = new SolidBrush(e.CellStyle.BackColor))
+                        e.Graphics.FillRectangle(bgBrush, mergedRect);
+
+                    using (var pen = new Pen(dgv.GridColor))
+                        e.Graphics.DrawRectangle(pen, mergedRect.X - 1, mergedRect.Y - 1, mergedRect.Width, mergedRect.Height);
+
+                    TextRenderer.DrawText(e.Graphics, "SPEC",
+                        new Font("맑은 고딕", 8F, FontStyle.Bold),
+                        mergedRect, Color.Black,
+                        TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+                }
+                // MAX 행(row 1): 이미 MIN 행에서 그렸으므로 아무것도 안 함
+                return;
+            }
+
+            // ===== 컬럼 헤더 커스텀 페인팅 =====
             if (e.RowIndex != -1 || e.ColumnIndex < 0) return;
 
             // 기본 배경 그리기
@@ -164,7 +204,7 @@ namespace _20260202_P2_MIDDLE
                 TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
 
             // 셀 테두리 그리기
-            using (var pen = new Pen(dgvTaskList.GridColor))
+            using (var pen = new Pen(dgv.GridColor))
             {
                 // 외곽 테두리
                 e.Graphics.DrawRectangle(pen,
@@ -305,5 +345,10 @@ namespace _20260202_P2_MIDDLE
         }
 
         #endregion
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

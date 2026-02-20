@@ -30,8 +30,8 @@ namespace _20260202_P2_MIDDLE
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -82,8 +82,8 @@ namespace _20260202_P2_MIDDLE
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -139,7 +139,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(2564, 1447);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(2939, 1447);
             this.tableLayoutPanel2.TabIndex = 1;
             this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint_1);
             // 
@@ -152,7 +152,7 @@ namespace _20260202_P2_MIDDLE
             this.groupBox1.Margin = new System.Windows.Forms.Padding(41, 8, 41, 18);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.groupBox1.Size = new System.Drawing.Size(2482, 93);
+            this.groupBox1.Size = new System.Drawing.Size(2857, 93);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Recipe";
@@ -176,7 +176,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(2470, 56);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(2845, 56);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // label2
@@ -186,7 +186,7 @@ namespace _20260202_P2_MIDDLE
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1096, 0);
+            this.label2.Location = new System.Drawing.Point(1246, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 56);
@@ -217,10 +217,10 @@ namespace _20260202_P2_MIDDLE
             this.btnRecipeOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnRecipeOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnRecipeOpen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecipeOpen.Location = new System.Drawing.Point(2240, 0);
+            this.btnRecipeOpen.Location = new System.Drawing.Point(2570, 0);
             this.btnRecipeOpen.Margin = new System.Windows.Forms.Padding(6, 0, 6, 8);
             this.btnRecipeOpen.Name = "btnRecipeOpen";
-            this.btnRecipeOpen.Size = new System.Drawing.Size(224, 48);
+            this.btnRecipeOpen.Size = new System.Drawing.Size(269, 48);
             this.btnRecipeOpen.TabIndex = 8;
             this.btnRecipeOpen.Text = "Select Recipe";
             this.btnRecipeOpen.UseVisualStyleBackColor = false;
@@ -234,7 +234,7 @@ namespace _20260202_P2_MIDDLE
             this.tboxRecipeFile.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
             this.tboxRecipeFile.Multiline = false;
             this.tboxRecipeFile.Name = "tboxRecipeFile";
-            this.tboxRecipeFile.Size = new System.Drawing.Size(775, 56);
+            this.tboxRecipeFile.Size = new System.Drawing.Size(925, 56);
             this.tboxRecipeFile.TabIndex = 9;
             this.tboxRecipeFile.Text = "";
             // 
@@ -243,11 +243,11 @@ namespace _20260202_P2_MIDDLE
             this.tboxRecipeFilePath.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tboxRecipeFilePath.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tboxRecipeFilePath.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxRecipeFilePath.Location = new System.Drawing.Point(1293, 0);
+            this.tboxRecipeFilePath.Location = new System.Drawing.Point(1443, 0);
             this.tboxRecipeFilePath.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
             this.tboxRecipeFilePath.Multiline = false;
             this.tboxRecipeFilePath.Name = "tboxRecipeFilePath";
-            this.tboxRecipeFilePath.Size = new System.Drawing.Size(932, 56);
+            this.tboxRecipeFilePath.Size = new System.Drawing.Size(1112, 56);
             this.tboxRecipeFilePath.TabIndex = 10;
             this.tboxRecipeFilePath.Text = "";
             // 
@@ -259,7 +259,7 @@ namespace _20260202_P2_MIDDLE
             this.groupBox6.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.groupBox6.Size = new System.Drawing.Size(2552, 245);
+            this.groupBox6.Size = new System.Drawing.Size(2927, 245);
             this.groupBox6.TabIndex = 7;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "JIG Communication";
@@ -273,7 +273,7 @@ namespace _20260202_P2_MIDDLE
             this.tabControl5.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(2540, 218);
+            this.tabControl5.Size = new System.Drawing.Size(2915, 218);
             this.tabControl5.TabIndex = 0;
             // 
             // tabPage13
@@ -283,7 +283,7 @@ namespace _20260202_P2_MIDDLE
             this.tabPage13.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tabPage13.Size = new System.Drawing.Size(2532, 186);
+            this.tabPage13.Size = new System.Drawing.Size(2907, 186);
             this.tabPage13.TabIndex = 0;
             this.tabPage13.Text = "Log";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -302,7 +302,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel22.RowCount = 2;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(2520, 180);
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(2895, 180);
             this.tableLayoutPanel22.TabIndex = 1;
             // 
             // tboxJigLog
@@ -313,7 +313,7 @@ namespace _20260202_P2_MIDDLE
             this.tboxJigLog.Location = new System.Drawing.Point(6, 39);
             this.tboxJigLog.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tboxJigLog.Name = "tboxJigLog";
-            this.tboxJigLog.Size = new System.Drawing.Size(2508, 138);
+            this.tboxJigLog.Size = new System.Drawing.Size(2883, 138);
             this.tboxJigLog.TabIndex = 2;
             this.tboxJigLog.Text = "";
             // 
@@ -321,7 +321,7 @@ namespace _20260202_P2_MIDDLE
             // 
             this.lblClearJigLog.AutoSize = true;
             this.lblClearJigLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblClearJigLog.Location = new System.Drawing.Point(2383, 0);
+            this.lblClearJigLog.Location = new System.Drawing.Point(2758, 0);
             this.lblClearJigLog.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblClearJigLog.Name = "lblClearJigLog";
             this.lblClearJigLog.Size = new System.Drawing.Size(131, 36);
@@ -337,7 +337,7 @@ namespace _20260202_P2_MIDDLE
             this.tabPage14.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tabPage14.Size = new System.Drawing.Size(2906, 186);
+            this.tabPage14.Size = new System.Drawing.Size(2532, 186);
             this.tabPage14.TabIndex = 1;
             this.tabPage14.Text = "Comm";
             this.tabPage14.UseVisualStyleBackColor = true;
@@ -356,7 +356,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel31.RowCount = 2;
             this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel31.Size = new System.Drawing.Size(2894, 180);
+            this.tableLayoutPanel31.Size = new System.Drawing.Size(2520, 180);
             this.tableLayoutPanel31.TabIndex = 1;
             // 
             // tboxJigComm
@@ -367,7 +367,7 @@ namespace _20260202_P2_MIDDLE
             this.tboxJigComm.Location = new System.Drawing.Point(6, 39);
             this.tboxJigComm.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tboxJigComm.Name = "tboxJigComm";
-            this.tboxJigComm.Size = new System.Drawing.Size(2882, 138);
+            this.tboxJigComm.Size = new System.Drawing.Size(2508, 138);
             this.tboxJigComm.TabIndex = 2;
             this.tboxJigComm.Text = "";
             // 
@@ -375,7 +375,7 @@ namespace _20260202_P2_MIDDLE
             // 
             this.lblClearJigComm.AutoSize = true;
             this.lblClearJigComm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblClearJigComm.Location = new System.Drawing.Point(2757, 0);
+            this.lblClearJigComm.Location = new System.Drawing.Point(2383, 0);
             this.lblClearJigComm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblClearJigComm.Name = "lblClearJigComm";
             this.lblClearJigComm.Size = new System.Drawing.Size(131, 36);
@@ -416,7 +416,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(2564, 144);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(2939, 144);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // btnManualOpen
@@ -427,10 +427,10 @@ namespace _20260202_P2_MIDDLE
             this.btnManualOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnManualOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnManualOpen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnManualOpen.Location = new System.Drawing.Point(2389, 10);
+            this.btnManualOpen.Location = new System.Drawing.Point(2728, 10);
             this.btnManualOpen.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.btnManualOpen.Name = "btnManualOpen";
-            this.btnManualOpen.Size = new System.Drawing.Size(155, 124);
+            this.btnManualOpen.Size = new System.Drawing.Size(191, 124);
             this.btnManualOpen.TabIndex = 11;
             this.btnManualOpen.Text = "Manual";
             this.btnManualOpen.UseVisualStyleBackColor = false;
@@ -443,10 +443,10 @@ namespace _20260202_P2_MIDDLE
             this.btnCalibrationOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnCalibrationOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCalibrationOpen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCalibrationOpen.Location = new System.Drawing.Point(2197, 10);
+            this.btnCalibrationOpen.Location = new System.Drawing.Point(2499, 10);
             this.btnCalibrationOpen.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.btnCalibrationOpen.Name = "btnCalibrationOpen";
-            this.btnCalibrationOpen.Size = new System.Drawing.Size(152, 124);
+            this.btnCalibrationOpen.Size = new System.Drawing.Size(189, 124);
             this.btnCalibrationOpen.TabIndex = 10;
             this.btnCalibrationOpen.Text = "Calibration";
             this.btnCalibrationOpen.UseVisualStyleBackColor = false;
@@ -459,10 +459,10 @@ namespace _20260202_P2_MIDDLE
             this.btnRecipeSettingsOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnRecipeSettingsOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnRecipeSettingsOpen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRecipeSettingsOpen.Location = new System.Drawing.Point(2005, 10);
+            this.btnRecipeSettingsOpen.Location = new System.Drawing.Point(2270, 10);
             this.btnRecipeSettingsOpen.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.btnRecipeSettingsOpen.Name = "btnRecipeSettingsOpen";
-            this.btnRecipeSettingsOpen.Size = new System.Drawing.Size(152, 124);
+            this.btnRecipeSettingsOpen.Size = new System.Drawing.Size(189, 124);
             this.btnRecipeSettingsOpen.TabIndex = 9;
             this.btnRecipeSettingsOpen.Text = "Setting";
             this.btnRecipeSettingsOpen.UseVisualStyleBackColor = false;
@@ -476,10 +476,10 @@ namespace _20260202_P2_MIDDLE
             this.btnComSettingsOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnComSettingsOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnComSettingsOpen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnComSettingsOpen.Location = new System.Drawing.Point(1813, 10);
+            this.btnComSettingsOpen.Location = new System.Drawing.Point(2041, 10);
             this.btnComSettingsOpen.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.btnComSettingsOpen.Name = "btnComSettingsOpen";
-            this.btnComSettingsOpen.Size = new System.Drawing.Size(152, 124);
+            this.btnComSettingsOpen.Size = new System.Drawing.Size(189, 124);
             this.btnComSettingsOpen.TabIndex = 8;
             this.btnComSettingsOpen.Text = "COM Settings";
             this.btnComSettingsOpen.UseVisualStyleBackColor = false;
@@ -492,10 +492,10 @@ namespace _20260202_P2_MIDDLE
             this.lblValueModel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblValueModel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblValueModel.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValueModel.Location = new System.Drawing.Point(1611, 21);
+            this.lblValueModel.Location = new System.Drawing.Point(1800, 21);
             this.lblValueModel.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblValueModel.Name = "lblValueModel";
-            this.lblValueModel.Size = new System.Drawing.Size(162, 102);
+            this.lblValueModel.Size = new System.Drawing.Size(201, 102);
             this.lblValueModel.TabIndex = 7;
             this.lblValueModel.Text = "-";
             this.lblValueModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -507,10 +507,10 @@ namespace _20260202_P2_MIDDLE
             this.lblTextModel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTextModel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTextModel.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTextModel.Location = new System.Drawing.Point(1419, 21);
+            this.lblTextModel.Location = new System.Drawing.Point(1571, 21);
             this.lblTextModel.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblTextModel.Name = "lblTextModel";
-            this.lblTextModel.Size = new System.Drawing.Size(152, 102);
+            this.lblTextModel.Size = new System.Drawing.Size(189, 102);
             this.lblTextModel.TabIndex = 6;
             this.lblTextModel.Text = "Model";
             this.lblTextModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -522,10 +522,10 @@ namespace _20260202_P2_MIDDLE
             this.lblValueLotNo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblValueLotNo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblValueLotNo.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValueLotNo.Location = new System.Drawing.Point(1217, 21);
+            this.lblValueLotNo.Location = new System.Drawing.Point(1330, 21);
             this.lblValueLotNo.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblValueLotNo.Name = "lblValueLotNo";
-            this.lblValueLotNo.Size = new System.Drawing.Size(162, 102);
+            this.lblValueLotNo.Size = new System.Drawing.Size(201, 102);
             this.lblValueLotNo.TabIndex = 5;
             this.lblValueLotNo.Text = "-";
             this.lblValueLotNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -537,10 +537,10 @@ namespace _20260202_P2_MIDDLE
             this.lblTextLotNo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTextLotNo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTextLotNo.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTextLotNo.Location = new System.Drawing.Point(1025, 21);
+            this.lblTextLotNo.Location = new System.Drawing.Point(1101, 21);
             this.lblTextLotNo.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblTextLotNo.Name = "lblTextLotNo";
-            this.lblTextLotNo.Size = new System.Drawing.Size(152, 102);
+            this.lblTextLotNo.Size = new System.Drawing.Size(189, 102);
             this.lblTextLotNo.TabIndex = 4;
             this.lblTextLotNo.Text = "Lot No.";
             this.lblTextLotNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -552,10 +552,10 @@ namespace _20260202_P2_MIDDLE
             this.lblValueMcuNo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblValueMcuNo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblValueMcuNo.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValueMcuNo.Location = new System.Drawing.Point(823, 21);
+            this.lblValueMcuNo.Location = new System.Drawing.Point(860, 21);
             this.lblValueMcuNo.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblValueMcuNo.Name = "lblValueMcuNo";
-            this.lblValueMcuNo.Size = new System.Drawing.Size(162, 102);
+            this.lblValueMcuNo.Size = new System.Drawing.Size(201, 102);
             this.lblValueMcuNo.TabIndex = 3;
             this.lblValueMcuNo.Text = "-";
             this.lblValueMcuNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -570,7 +570,7 @@ namespace _20260202_P2_MIDDLE
             this.lblTextMcuNo.Location = new System.Drawing.Point(631, 21);
             this.lblTextMcuNo.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblTextMcuNo.Name = "lblTextMcuNo";
-            this.lblTextMcuNo.Size = new System.Drawing.Size(152, 102);
+            this.lblTextMcuNo.Size = new System.Drawing.Size(189, 102);
             this.lblTextMcuNo.TabIndex = 2;
             this.lblTextMcuNo.Text = "Mcu No.";
             this.lblTextMcuNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -607,7 +607,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.44737F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.55264F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(2556, 912);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(2931, 912);
             this.tableLayoutPanel5.TabIndex = 9;
             // 
             // tabControl1
@@ -616,11 +616,11 @@ namespace _20260202_P2_MIDDLE
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 168);
+            this.tabControl1.Location = new System.Drawing.Point(0, 167);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0, 18, 0, 18);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(2044, 726);
+            this.tabControl1.Size = new System.Drawing.Size(2344, 727);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
@@ -630,7 +630,7 @@ namespace _20260202_P2_MIDDLE
             this.tabPage1.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tabPage1.Size = new System.Drawing.Size(2036, 694);
+            this.tabPage1.Size = new System.Drawing.Size(2336, 695);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "TaskList";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -642,28 +642,28 @@ namespace _20260202_P2_MIDDLE
             this.dgvTaskList.AllowUserToResizeColumns = false;
             this.dgvTaskList.AllowUserToResizeRows = false;
             this.dgvTaskList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTaskList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTaskList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTaskList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTaskList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTaskList.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTaskList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTaskList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTaskList.EnableHeadersVisualStyles = false;
             this.dgvTaskList.Location = new System.Drawing.Point(6, 3);
@@ -672,7 +672,7 @@ namespace _20260202_P2_MIDDLE
             this.dgvTaskList.RowHeadersVisible = false;
             this.dgvTaskList.RowHeadersWidth = 51;
             this.dgvTaskList.RowTemplate.Height = 27;
-            this.dgvTaskList.Size = new System.Drawing.Size(2024, 688);
+            this.dgvTaskList.Size = new System.Drawing.Size(2324, 689);
             this.dgvTaskList.TabIndex = 0;
             // 
             // Column1
@@ -706,7 +706,7 @@ namespace _20260202_P2_MIDDLE
             this.tabPage2.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tabPage2.Size = new System.Drawing.Size(2336, 694);
+            this.tabPage2.Size = new System.Drawing.Size(2036, 695);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Log";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -725,7 +725,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel15.RowCount = 2;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(2324, 688);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(2024, 689);
             this.tableLayoutPanel15.TabIndex = 0;
             // 
             // tboxLog
@@ -735,7 +735,7 @@ namespace _20260202_P2_MIDDLE
             this.tboxLog.Location = new System.Drawing.Point(6, 39);
             this.tboxLog.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tboxLog.Name = "tboxLog";
-            this.tboxLog.Size = new System.Drawing.Size(2312, 646);
+            this.tboxLog.Size = new System.Drawing.Size(2012, 647);
             this.tboxLog.TabIndex = 2;
             this.tboxLog.Text = "";
             // 
@@ -743,7 +743,7 @@ namespace _20260202_P2_MIDDLE
             // 
             this.lblClearLog.AutoSize = true;
             this.lblClearLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblClearLog.Location = new System.Drawing.Point(2181, 0);
+            this.lblClearLog.Location = new System.Drawing.Point(1881, 0);
             this.lblClearLog.Margin = new System.Windows.Forms.Padding(0);
             this.lblClearLog.Name = "lblClearLog";
             this.lblClearLog.Size = new System.Drawing.Size(143, 36);
@@ -759,7 +759,7 @@ namespace _20260202_P2_MIDDLE
             this.tabPage3.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tabPage3.Size = new System.Drawing.Size(2336, 694);
+            this.tabPage3.Size = new System.Drawing.Size(2036, 695);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Comm";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -778,7 +778,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel16.RowCount = 2;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(2324, 688);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(2024, 689);
             this.tableLayoutPanel16.TabIndex = 0;
             // 
             // tboxComm
@@ -788,7 +788,7 @@ namespace _20260202_P2_MIDDLE
             this.tboxComm.Location = new System.Drawing.Point(6, 39);
             this.tboxComm.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tboxComm.Name = "tboxComm";
-            this.tboxComm.Size = new System.Drawing.Size(2312, 646);
+            this.tboxComm.Size = new System.Drawing.Size(2012, 647);
             this.tboxComm.TabIndex = 3;
             this.tboxComm.Text = "";
             // 
@@ -796,7 +796,7 @@ namespace _20260202_P2_MIDDLE
             // 
             this.lblClearComm.AutoSize = true;
             this.lblClearComm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblClearComm.Location = new System.Drawing.Point(2181, 0);
+            this.lblClearComm.Location = new System.Drawing.Point(1881, 0);
             this.lblClearComm.Margin = new System.Windows.Forms.Padding(0);
             this.lblClearComm.Name = "lblClearComm";
             this.lblClearComm.Size = new System.Drawing.Size(143, 36);
@@ -810,10 +810,10 @@ namespace _20260202_P2_MIDDLE
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button4.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button4.Location = new System.Drawing.Point(2303, 4);
+            this.button4.Location = new System.Drawing.Point(2641, 4);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(249, 142);
+            this.button4.Size = new System.Drawing.Size(286, 141);
             this.button4.TabIndex = 16;
             this.button4.Text = "Stop";
             this.button4.UseVisualStyleBackColor = false;
@@ -823,10 +823,10 @@ namespace _20260202_P2_MIDDLE
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button3.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button3.Location = new System.Drawing.Point(2048, 4);
+            this.button3.Location = new System.Drawing.Point(2348, 4);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(247, 142);
+            this.button3.Size = new System.Drawing.Size(285, 141);
             this.button3.TabIndex = 15;
             this.button3.Text = "Start";
             this.button3.UseVisualStyleBackColor = false;
@@ -839,15 +839,9 @@ namespace _20260202_P2_MIDDLE
             this.lblResult.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblResult.Location = new System.Drawing.Point(3, 0);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(2038, 150);
+            this.lblResult.Size = new System.Drawing.Size(2338, 149);
             this.lblResult.TabIndex = 18;
             this.lblResult.Text = "-";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // tableLayoutPanel6
             // 
@@ -856,23 +850,30 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(2047, 153);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(2347, 152);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(506, 756);
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 757F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(581, 757);
             this.tableLayoutPanel6.TabIndex = 19;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2564, 1447);
+            this.ClientSize = new System.Drawing.Size(2939, 1447);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);

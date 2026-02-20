@@ -1,13 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 
@@ -15,244 +10,341 @@ namespace _20260202_P2_MIDDLE.Forms
 {
     public partial class ComSettingForm : Form
     {
-        // CH1 통신용 TCP 클라이언트
-        private TcpClient _tcpCh1Client;
-        // Jig용 시리얼 포트
-        private SerialPort _jigSerialPort;
-        // LCR용 시리얼 포트
-        private SerialPort _lcrSerialPort;
+        private const int IP_BOARD_COUNT = 9;
 
         public ComSettingForm()
         {
             InitializeComponent();
-
-            // TCP CH1 기본값 세팅
-            tboxTcpCh1Port.Text = "192.168.0.101";
-            tboxTcpCh1Ip.Text = "5000";
-
-            // 폼이 생성될 때 COM 포트 / 보레이트 목록 초기화
-            InitializeSerialControls();
-
-            // 상태 라벨 초기화 (미연결 상태)
-            SetLabelDisconnected(EternetComeState);
-            SetLabelDisconnected(JigComeState);
-            SetLabelDisconnected(LcrComeState);
         }
 
-        /// <summary>
-        /// 라벨을 "Connected" (초록) 상태로 변경
-        /// </summary>
-        private void SetLabelConnected(Label lbl)
+        private void ComSettingForm_Load(object sender, EventArgs e)
         {
-            lbl.Text = "Connected";
-            lbl.BackColor = Color.LimeGreen;
-            lbl.ForeColor = Color.White;
+            SetupIpGrid();
+            SetupSerialGrid();
+
+            dgvIpsetting.CellDoubleClick += DgvIpsetting_CellDoubleClick;
+            dgvSerialsetting.CellDoubleClick += DgvSerialsetting_CellDoubleClick;
+            btnConnectCheck.Click += BtnCheck_Click;
+            btnComSave.Click += BtnSave_Click;
+            btnComCancel.Click += BtnCancel_Click;
         }
 
-        /// <summary>
-        /// 라벨을 "Not Connect" (적색) 상태로 변경
-        /// </summary>
-        private void SetLabelDisconnected(Label lbl)
+        #region IP Address DataGridView 설정
+
+        private void SetupIpGrid()
         {
-            lbl.Text = "Not Connect";
-            lbl.BackColor = Color.Red;
-            lbl.ForeColor = Color.White;
+            var dgv = dgvIpsetting;
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToDeleteRows = false;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.ReadOnly = true;
+            dgv.RowHeadersVisible = false;
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.DefaultCellStyle.Font = new Font("맑은 고딕", 9F);
+
+            dgv.Columns["No"].FillWeight = 30;
+            dgv.Columns["En"].FillWeight = 30;
+            dgv.Columns["Check"].FillWeight = 40;
+            dgv.Columns["Board"].FillWeight = 80;
+            dgv.Columns["IPAddress"].FillWeight = 100;
+            dgv.Columns["Port"].FillWeight = 50;
+
+            dgv.Columns["No"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.Columns["En"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.Columns["Check"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.Columns["Board"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.Columns["IPAddress"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.Columns["Port"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("맑은 고딕", 9F, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgv.EnableHeadersVisualStyles = false;
+
+            dgv.Rows.Clear();
+            for (int i = 1; i <= IP_BOARD_COUNT; i++)
+            {
+                dgv.Rows.Add(i, "-", "", $"Board {i}", $"192.168.0.{100 + i}", "5000");
+            }
+
+            HighlightSelectedRow(dgv);
         }
 
-        /// <summary>
-        /// Jig / LCR COM 포트 및 보레이트 콤보박스 초기화
-        /// </summary>
-        private void InitializeSerialControls()
+        private void DgvIpsetting_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            // 사용 가능한 COM 포트 목록
+            if (e.RowIndex < 0) return;
+
+            var row = dgvIpsetting.Rows[e.RowIndex];
+
+            using (var dlg = new IpSettingsDialog())
+            {
+                dlg.IpAddress = row.Cells["IPAddress"].Value?.ToString() ?? "";
+                dlg.PortNumber = row.Cells["Port"].Value?.ToString() ?? "";
+                dlg.Enable = (row.Cells["En"].Value?.ToString() == "√");
+
+                if (dlg.ShowDialog(this) == DialogResult.OK)
+                {
+                    row.Cells["IPAddress"].Value = dlg.IpAddress;
+                    row.Cells["Port"].Value = dlg.PortNumber;
+                    row.Cells["En"].Value = dlg.Enable ? "√" : "-";
+                }
+            }
+        }
+
+        #endregion
+
+        #region Connection Check
+
+        private void BtnCheck_Click(object sender, EventArgs e)
+        {
+            CheckTcpConnections();
+            CheckSerialConnections();
+        }
+
+        private void CheckTcpConnections()
+        {
+            var dgv = dgvIpsetting;
+            int successCount = 0;
+            int failCount = 0;
+
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                string en = row.Cells["En"].Value?.ToString() ?? "";
+                if (en != "√")
+                {
+                    row.Cells["Check"].Value = "-";
+                    row.DefaultCellStyle.BackColor = Color.White;
+                    continue;
+                }
+
+                string ip = row.Cells["IPAddress"].Value?.ToString() ?? "";
+                string portStr = row.Cells["Port"].Value?.ToString() ?? "";
+
+                int portNum;
+                if (!System.Net.IPAddress.TryParse(ip, out _) ||
+                    !int.TryParse(portStr, out portNum) || portNum <= 0 || portNum > 65535)
+                {
+                    row.Cells["Check"].Value = "FAIL";
+                    row.DefaultCellStyle.BackColor = Color.MistyRose;
+                    failCount++;
+                    continue;
+                }
+
+                bool connected = TryTcpConnect(ip, portNum, timeoutMs: 1000);
+                if (connected)
+                {
+                    row.Cells["Check"].Value = "OK";
+                    row.DefaultCellStyle.BackColor = Color.LightGreen;
+                    successCount++;
+                }
+                else
+                {
+                    row.Cells["Check"].Value = "FAIL";
+                    row.DefaultCellStyle.BackColor = Color.MistyRose;
+                    failCount++;
+                }
+            }
+
+            MessageBox.Show(
+                $"TCP 연결 체크 완료\n\n성공: {successCount}개\n실패: {failCount}개",
+                "TCP Connection Check",
+                MessageBoxButtons.OK,
+                successCount > 0 && failCount == 0 ? MessageBoxIcon.Information : MessageBoxIcon.Warning);
+        }
+
+        private bool TryTcpConnect(string ip, int port, int timeoutMs)
+        {
             try
             {
-                var ports = SerialPort.GetPortNames()
-                                      .OrderBy(p => p)
-                                      .ToArray();
-
-                cboxJigPort.Items.Clear();
-                cboxJigPort.Items.AddRange(ports);
-                if (ports.Length > 0)
-                    cboxJigPort.SelectedIndex = 0;
-
-                cboxLcrPort.Items.Clear();
-                cboxLcrPort.Items.AddRange(ports);
-                if (ports.Length > 0)
-                    cboxLcrPort.SelectedIndex = 0;
+                using (var client = new TcpClient())
+                {
+                    var result = client.BeginConnect(ip, port, null, null);
+                    bool success = result.AsyncWaitHandle.WaitOne(timeoutMs);
+                    if (success && client.Connected)
+                    {
+                        client.EndConnect(result);
+                        return true;
+                    }
+                    return false;
+                }
             }
-            catch { }
-
-            // 보레이트 목록
-            int[] baudRates = { 9600, 19200, 38400, 57600, 115200, 230400 };
-
-            cboxJigBaudRate.Items.Clear();
-            cboxLcrBaudRate.Items.Clear();
-            foreach (int br in baudRates)
+            catch
             {
-                cboxJigBaudRate.Items.Add(br.ToString());
-                cboxLcrBaudRate.Items.Add(br.ToString());
+                return false;
             }
-
-            // 기본값 9600
-            cboxJigBaudRate.SelectedItem = "9600";
-            cboxLcrBaudRate.SelectedItem = "9600";
         }
 
-        private void tboxTcpCh1Port_TextChanged(object sender, EventArgs e)
-        {
-        }
+        #endregion
 
-        private void tboxTcpCh1Ip_TextChanged(object sender, EventArgs e)
-        {
-        }
+        #region Serial Port DataGridView 설정
 
-        /// <summary>
-        /// btnConnect 클릭 시:
-        /// 1) CH1 TCP 통신 연결
-        /// 2) Jig 시리얼 통신 연결
-        /// 3) LCR 시리얼 통신 연결
-        /// </summary>
-        private void btnConnect_Click(object sender, EventArgs e)
+        private void SetupSerialGrid()
         {
-            // ==================== 1) TCP CH1 연결 ====================
-            string ipText = tboxTcpCh1Port.Text.Trim();
-            string portText = tboxTcpCh1Ip.Text.Trim();
+            var dgv = dgvSerialsetting;
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToDeleteRows = false;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.ReadOnly = true;
+            dgv.RowHeadersVisible = false;
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.DefaultCellStyle.Font = new Font("맑은 고딕", 9F);
 
-            if (!IPAddress.TryParse(ipText, out _))
+            dgv.Columns["dataGridViewTextBoxColumn1"].FillWeight = 30;
+            dgv.Columns["dataGridViewTextBoxColumn2"].FillWeight = 30;
+            dgv.Columns["dataGridViewTextBoxColumn3"].FillWeight = 40;
+            dgv.Columns["dataGridViewTextBoxColumn4"].FillWeight = 80;
+            dgv.Columns["dataGridViewTextBoxColumn5"].FillWeight = 60;
+            dgv.Columns["dataGridViewTextBoxColumn6"].FillWeight = 60;
+
+            foreach (DataGridViewColumn col in dgv.Columns)
+                col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("맑은 고딕", 9F, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgv.EnableHeadersVisualStyles = false;
+
+            dgv.Rows.Clear();
+            string[] devNames = { "JIG", "LCR" };
+            var ports = SerialPort.GetPortNames().OrderBy(p => p).ToArray();
+
+            for (int i = 0; i < devNames.Length; i++)
             {
-                MessageBox.Show("유효한 IP 주소를 입력해 주세요.", "입력 오류",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                tboxTcpCh1Port.Focus();
-                return;
+                string comPort = (i < ports.Length) ? ports[i] : "COM1";
+                dgv.Rows.Add(i + 1, "-", "", devNames[i], comPort, "115200");
             }
 
-            if (!int.TryParse(portText, out int port) || port <= 0 || port > 65535)
+            HighlightSelectedRow(dgv);
+        }
+
+        private void DgvSerialsetting_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            var row = dgvSerialsetting.Rows[e.RowIndex];
+
+            using (var dlg = new SerialSettingsDialog())
             {
-                MessageBox.Show("유효한 Port 번호(1~65535)를 입력해 주세요.", "입력 오류",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                tboxTcpCh1Ip.Focus();
-                return;
+                dlg.DeviceName = row.Cells["dataGridViewTextBoxColumn4"].Value?.ToString() ?? "";
+                dlg.CommPort = row.Cells["dataGridViewTextBoxColumn5"].Value?.ToString() ?? "";
+                dlg.Baudrate = row.Cells["dataGridViewTextBoxColumn6"].Value?.ToString() ?? "";
+                dlg.Enable = (row.Cells["dataGridViewTextBoxColumn2"].Value?.ToString() == "√");
+
+                if (dlg.ShowDialog(this) == DialogResult.OK)
+                {
+                    row.Cells["dataGridViewTextBoxColumn5"].Value = dlg.CommPort;
+                    row.Cells["dataGridViewTextBoxColumn6"].Value = dlg.Baudrate;
+                    row.Cells["dataGridViewTextBoxColumn2"].Value = dlg.Enable ? "√" : "-";
+                }
+            }
+        }
+
+        #endregion
+
+        #region Serial Connection Check
+
+        private void CheckSerialConnections()
+        {
+            var dgv = dgvSerialsetting;
+            int successCount = 0;
+            int failCount = 0;
+
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                string en = row.Cells["dataGridViewTextBoxColumn2"].Value?.ToString() ?? "";
+                if (en != "√")
+                {
+                    row.Cells["dataGridViewTextBoxColumn3"].Value = "-";
+                    row.DefaultCellStyle.BackColor = Color.White;
+                    continue;
+                }
+
+                string portName = row.Cells["dataGridViewTextBoxColumn5"].Value?.ToString() ?? "";
+                string baudStr = row.Cells["dataGridViewTextBoxColumn6"].Value?.ToString() ?? "";
+
+                if (string.IsNullOrWhiteSpace(portName) ||
+                    !int.TryParse(baudStr, out int baud) || baud <= 0)
+                {
+                    row.Cells["dataGridViewTextBoxColumn3"].Value = "FAIL";
+                    row.DefaultCellStyle.BackColor = Color.MistyRose;
+                    failCount++;
+                    continue;
+                }
+
+                bool connected = TrySerialConnect(portName, baud);
+                if (connected)
+                {
+                    row.Cells["dataGridViewTextBoxColumn3"].Value = "OK";
+                    row.DefaultCellStyle.BackColor = Color.LightGreen;
+                    successCount++;
+                }
+                else
+                {
+                    row.Cells["dataGridViewTextBoxColumn3"].Value = "FAIL";
+                    row.DefaultCellStyle.BackColor = Color.MistyRose;
+                    failCount++;
+                }
             }
 
+            MessageBox.Show(
+                $"시리얼 연결 체크 완료\n\n성공: {successCount}개\n실패: {failCount}개",
+                "Serial Connection Check",
+                MessageBoxButtons.OK,
+                successCount > 0 && failCount == 0 ? MessageBoxIcon.Information : MessageBoxIcon.Warning);
+        }
+
+        private bool TrySerialConnect(string portName, int baudRate)
+        {
             try
             {
-                if (_tcpCh1Client != null)
+                using (var sp = new SerialPort(portName, baudRate, Parity.None, 8, StopBits.One))
                 {
-                    if (_tcpCh1Client.Connected)
-                        _tcpCh1Client.Close();
-                    _tcpCh1Client = null;
-                }
-
-                _tcpCh1Client = new TcpClient();
-                _tcpCh1Client.Connect(ipText, port);
-
-                SetLabelConnected(EternetComeState);
-            }
-            catch (Exception ex)
-            {
-                SetLabelDisconnected(EternetComeState);
-                MessageBox.Show($"TCP 통신 연결에 실패했습니다.\n\n{ex.Message}", "연결 실패",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                if (_tcpCh1Client != null)
-                {
-                    _tcpCh1Client.Close();
-                    _tcpCh1Client = null;
+                    sp.ReadTimeout = 500;
+                    sp.WriteTimeout = 500;
+                    sp.Open();
+                    bool isOpen = sp.IsOpen;
+                    sp.Close();
+                    return isOpen;
                 }
             }
-
-            // ==================== 2) Jig 시리얼 통신 연결 ====================
-            string jigPortName = cboxJigPort.SelectedItem as string;
-            if (string.IsNullOrWhiteSpace(jigPortName))
+            catch
             {
-                MessageBox.Show("Jig용 COM 포트를 선택해 주세요.", "입력 오류",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string jigBaudText = cboxJigBaudRate.SelectedItem?.ToString() ?? cboxJigBaudRate.Text.Trim();
-            if (!int.TryParse(jigBaudText, out int jigBaud) || jigBaud <= 0)
-            {
-                MessageBox.Show("유효한 Jig Baud Rate를 선택해 주세요.", "입력 오류",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                if (_jigSerialPort != null)
-                {
-                    if (_jigSerialPort.IsOpen)
-                        _jigSerialPort.Close();
-                    _jigSerialPort.Dispose();
-                    _jigSerialPort = null;
-                }
-
-                _jigSerialPort = new SerialPort(jigPortName, jigBaud, Parity.None, 8, StopBits.One);
-                _jigSerialPort.Open();
-
-                SetLabelConnected(JigComeState);
-            }
-            catch (Exception ex)
-            {
-                SetLabelDisconnected(JigComeState);
-                MessageBox.Show($"Jig 시리얼 통신 연결에 실패했습니다.\n\n{ex.Message}", "연결 실패",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                if (_jigSerialPort != null)
-                {
-                    try { if (_jigSerialPort.IsOpen) _jigSerialPort.Close(); } catch { }
-                    _jigSerialPort.Dispose();
-                    _jigSerialPort = null;
-                }
-            }
-
-            // ==================== 3) LCR 시리얼 통신 연결 ====================
-            string lcrPortName = cboxLcrPort.SelectedItem as string;
-            if (string.IsNullOrWhiteSpace(lcrPortName))
-            {
-                MessageBox.Show("LCR용 COM 포트를 선택해 주세요.", "입력 오류",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string lcrBaudText = cboxLcrBaudRate.SelectedItem?.ToString() ?? cboxLcrBaudRate.Text.Trim();
-            if (!int.TryParse(lcrBaudText, out int lcrBaud) || lcrBaud <= 0)
-            {
-                MessageBox.Show("유효한 LCR Baud Rate를 선택해 주세요.", "입력 오류",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                if (_lcrSerialPort != null)
-                {
-                    if (_lcrSerialPort.IsOpen)
-                        _lcrSerialPort.Close();
-                    _lcrSerialPort.Dispose();
-                    _lcrSerialPort = null;
-                }
-
-                _lcrSerialPort = new SerialPort(lcrPortName, lcrBaud, Parity.None, 8, StopBits.One);
-                _lcrSerialPort.Open();
-
-                SetLabelConnected(LcrComeState);
-            }
-            catch (Exception ex)
-            {
-                SetLabelDisconnected(LcrComeState);
-                MessageBox.Show($"LCR 시리얼 통신 연결에 실패했습니다.\n\n{ex.Message}", "연결 실패",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                if (_lcrSerialPort != null)
-                {
-                    try { if (_lcrSerialPort.IsOpen) _lcrSerialPort.Close(); } catch { }
-                    _lcrSerialPort.Dispose();
-                    _lcrSerialPort = null;
-                }
+                return false;
             }
         }
+
+        #endregion
+
+        #region 공통 유틸
+
+        private void HighlightSelectedRow(DataGridView dgv)
+        {
+            dgv.DefaultCellStyle.SelectionBackColor = Color.SteelBlue;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.White;
+            if (dgv.Rows.Count > 0)
+                dgv.Rows[0].Selected = true;
+        }
+
+        #endregion
+
+        #region Save / Cancel
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("설정이 저장되었습니다.", "Save",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            DialogResult = DialogResult.OK;
+            Close();
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            Close();
+        }
+
+        #endregion
     }
 }
