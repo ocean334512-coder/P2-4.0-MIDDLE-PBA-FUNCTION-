@@ -70,6 +70,10 @@
     <Compile Include="Forms\IpSettingsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Communications\IDeviceComm.cs" />
+    <Compile Include="Communications\JigComm.cs" />
+    <Compile Include="Communications\LcrMeterComm.cs" />
+    <Compile Include="Communications\ControlBoardComm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\ComSettingForm.resx">
