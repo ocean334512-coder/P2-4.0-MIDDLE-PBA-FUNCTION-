@@ -14,8 +14,10 @@ namespace _20260202_P2_MIDDLE.Forms
 {
     public partial class RecipeSettingForm : Form
     {
-        // 저장 파일 경로 (실행파일 옆에 RecipeSettings.xml)
-        private static readonly string SaveFilePath =
+        /// <summary>
+        /// 저장 파일 경로 (실행파일 옆에 RecipeSettings.xml) — 외부에서도 접근 가능
+        /// </summary>
+        public static readonly string SaveFilePath =
             Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "RecipeSettings.xml");
 
         public RecipeSettingForm()
@@ -142,20 +144,22 @@ namespace _20260202_P2_MIDDLE.Forms
             dgv.Rows.Clear();
             object[][] specData = new object[][]
             {
-                new object[] { 1,  "PRESSURE",  "SET", "PRESSURE",       "",     "",      "" },
-                new object[] { 2,  "R202",      "SET", "R202 [Ω]",       560,    400,     700 },
-                new object[] { 3,  "R203",      "SET", "R203 [Ω]",       560,    400,     700 },
-                new object[] { 4,  "R204",      "SET", "R204 [Ω]",       560,    400,     700 },
-                new object[] { 5,  "R205",      "SET", "R205 [Ω]",       560,    400,     700 },
-                new object[] { 6,  "R207",      "SET", "R207 [Ω]",       10000,  600,     100000 },
-                new object[] { 7,  "RT201",     "SET", "RT201 [Ω]",      10000,  600,     100000 },
-                new object[] { 8,  "C203",      "SET", "C203 [nF]",      100,    50,      100 },
-                new object[] { 9,  "C204-C206", "SET", "C204-C206 [uF]", 20.1,   10,      25 },
-                new object[] { 10, "C207",      "SET", "C207 [nF]",      100,    60,      100 },
-                new object[] { 11, "C208",      "SET", "C208 [uF]",      10,     5,       15 },
-                new object[] { 12, "L201",      "SET", "L201 [Ω]",       0.5,    0.1,     0.6 },
-                new object[] { 13, "D201",      "SET", "D201 [V]",       1.7,    1,       3 },
-                new object[] { 14, "D202",      "SET", "D202 [V]",       1.7,    1,       3 },
+                new object[] { 1,  "PRESSURE",     "SET", "PRESSURE",       "",     100000,  300000 },
+                new object[] { 2,  "R202",         "SET", "R202 [Ω]",       560,    400,     700 },
+                new object[] { 3,  "R203",         "SET", "R203 [Ω]",       560,    400,     700 },
+                new object[] { 4,  "R204",         "SET", "R204 [Ω]",       560,    400,     700 },
+                new object[] { 5,  "R205",         "SET", "R205 [Ω]",       560,    400,     700 },
+                new object[] { 6,  "R207",         "SET", "R207 [Ω]",       10000,  600,     100000 },
+                new object[] { 7,  "RT201",        "SET", "RT201 [Ω]",      10000,  600,     100000 },
+                new object[] { 8,  "C203",         "SET", "C203 [nF]",      100,    50,      100 },
+                new object[] { 9,  "C204-C206",    "SET", "C204-C206 [uF]", 20.1,   10,      25 },
+                new object[] { 10, "C207",         "SET", "C207 [nF]",      100,    60,      100 },
+                new object[] { 11, "C208",         "SET", "C208 [uF]",      10,     5,       15 },
+                new object[] { 12, "L201",         "SET", "L201 [Ω]",       0.5,    0.1,     0.6 },
+                new object[] { 13, "D201",         "SET", "D201 [V]",       1.7,    1,       3 },
+                new object[] { 14, "D202",         "SET", "D202 [V]",       1.7,    1,       3 },
+                new object[] { 15, "COLOR SENSOR", "SET", "PRESSURE",       "",     1,       10 },
+                new object[] { 16, "LED VOLTAGE",  "SET", "LED",            1.7,    1,       3 },
             };
 
             foreach (var row in specData)

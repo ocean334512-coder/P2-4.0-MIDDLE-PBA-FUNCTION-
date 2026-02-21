@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using _20260202_P2_MIDDLE.Forms;
+using _20260202_P2_MIDDLE.Communications;
+using _20260202_P2_MIDDLE.TestSteps;
 
 namespace _20260202_P2_MIDDLE
 {
@@ -23,6 +25,14 @@ namespace _20260202_P2_MIDDLE
             ("CART CON", 7, 8),
             ("COMPONENT", 9, 20),
         };
+
+        // 통신 객체
+        private ControlBoardComm _boardComm;
+        private JigComm _jigComm;
+        private LcrMeterComm _lcrComm;
+
+        // 검사 시퀀스 러너
+        private TestSequenceRunner _testRunner;
 
         public Form1()
         {
@@ -299,6 +309,71 @@ namespace _20260202_P2_MIDDLE
 
         #endregion
 
+        #region 통신 로그 (Comm 탭)
+
+        private void InitializeCommLog()
+        {
+            lblClearJigComm.LinkClicked += (s, ev) => tboxJigComm.Clear();
+            lblClearJigLog.LinkClicked += (s, ev) => tboxJigLog.Clear();
+            tboxJigComm.ReadOnly = true;
+        }
+
+        /// <summary>
+        /// 통신 로그를 RichTextBox에 추가 (스레드 안전)
+        /// </summary>
+        private void AppendCommLog(string tag, string message, Color color)
+        {
+            if (tboxJigComm.InvokeRequired)
+            {
+                tboxJigComm.BeginInvoke(new Action(() => AppendCommLog(tag, message, color)));
+                return;
+            }
+
+            tboxJigComm.SelectionStart = tboxJigComm.TextLength;
+            tboxJigComm.SelectionLength = 0;
+
+            tboxJigComm.SelectionColor = Color.Gray;
+            tboxJigComm.AppendText($"[{DateTime.Now:HH:mm:ss.fff}] ");
+
+            tboxJigComm.SelectionColor = color;
+            tboxJigComm.AppendText($"{tag} : ");
+
+            tboxJigComm.SelectionColor = Color.Black;
+            tboxJigComm.AppendText($"{message}\n");
+
+            tboxJigComm.ScrollToCaret();
+
+            if (tboxJigComm.Lines.Length > 5000)
+            {
+                tboxJigComm.SelectionStart = 0;
+                tboxJigComm.SelectionLength = tboxJigComm.GetFirstCharIndexFromLine(1000);
+                tboxJigComm.SelectedText = "";
+            }
+        }
+
+        // ===== JIG =====
+        public void LogJigTx(string message) => AppendCommLog("[JIG TX]", message, Color.Blue);
+        public void LogJigRx(string message) => AppendCommLog("[JIG RX]", message, Color.DarkGreen);
+
+        // ===== LCR Meter =====
+        public void LogLcrTx(string message) => AppendCommLog("[LCR TX]", message, Color.DarkOrange);
+        public void LogLcrRx(string message) => AppendCommLog("[LCR RX]", message, Color.Purple);
+
+        // ===== Control Board =====
+        public void LogBoardTx(string message) => AppendCommLog("[BOARD TX]", message, Color.DarkRed);
+        public void LogBoardRx(string message) => AppendCommLog("[BOARD RX]", message, Color.Teal);
+
+        /// <summary>
+        /// 바이트 배열을 HEX 문자열로 변환
+        /// </summary>
+        public static string ToHexString(byte[] data)
+        {
+            if (data == null || data.Length == 0) return "(empty)";
+            return BitConverter.ToString(data).Replace("-", " ");
+        }
+
+        #endregion
+
         #region 기존 이벤트 핸들러
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
@@ -348,7 +423,169 @@ namespace _20260202_P2_MIDDLE
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            InitializeCommLog();
+            button3.Click += BtnStart_Click;
+            button4.Click += BtnStop_Click;
         }
+
+        #region START / STOP 검사 실행
+
+        private void BtnStart_Click(object sender, EventArgs e)
+        {
+            if (_testRunner != null && _testRunner.IsRunning)
+            {
+                MessageBox.Show("검사가 이미 실행 중입니다.", "알림",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // TODO: 실제 통신 객체가 연결되어 있는지 체크
+            if (_boardComm == null || _jigComm == null || _lcrComm == null)
+            {
+                MessageBox.Show("통신 연결을 먼저 확인해 주세요.\n(Com Settings에서 연결)", "통신 오류",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 설정 로드
+            var settings = TestSequenceRunner.LoadSettingsFromFile(RecipeSettingForm.SaveFilePath);
+
+            // 러너 생성
+            _testRunner = new TestSequenceRunner(
+                _boardComm, _jigComm, _lcrComm, settings,
+                logBoardTx: LogBoardTx, logBoardRx: LogBoardRx,
+                logJigTx: LogJigTx, logJigRx: LogJigRx,
+                logLcrTx: LogLcrTx, logLcrRx: LogLcrRx);
+
+            // 이벤트 등록
+            _testRunner.OnStatusChanged += (msg) =>
+            {
+                if (InvokeRequired)
+                    BeginInvoke(new Action(() => UpdateStatus(msg)));
+                else
+                    UpdateStatus(msg);
+            };
+
+            _testRunner.OnStepCompleted += (result, idx, total) =>
+            {
+                if (InvokeRequired)
+                    BeginInvoke(new Action(() => OnTestStepCompleted(result, idx, total)));
+                else
+                    OnTestStepCompleted(result, idx, total);
+            };
+
+            _testRunner.OnSequenceCompleted += (allPass, results) =>
+            {
+                if (InvokeRequired)
+                    BeginInvoke(new Action(() => OnTestSequenceCompleted(allPass, results)));
+                else
+                    OnTestSequenceCompleted(allPass, results);
+            };
+
+            // CH1 행 초기화
+            ClearChRow();
+
+            // UI 상태
+            button3.Enabled = false;
+            button4.Enabled = true;
+            lblResult.Text = "검사 중...";
+            lblResult.BackColor = Color.Yellow;
+            lblResult.ForeColor = Color.Black;
+
+            // 비동기 실행
+            _testRunner.RunAsync();
+        }
+
+        private void BtnStop_Click(object sender, EventArgs e)
+        {
+            if (_testRunner != null && _testRunner.IsRunning)
+            {
+                _testRunner.Cancel();
+                lblResult.Text = "STOP";
+                lblResult.BackColor = Color.Orange;
+            }
+        }
+
+        private void UpdateStatus(string message)
+        {
+            AppendCommLog("[SYSTEM]", message, Color.DarkMagenta);
+        }
+
+        /// <summary>
+        /// 검사 항목별 결과를 dgvTaskList에 표시
+        /// </summary>
+        private void OnTestStepCompleted(TestResult result, int index, int total)
+        {
+            int chRow = 2; // CH1 행 (SPEC MIN=0, MAX=1, CH1=2)
+
+            var columnMap = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+            {
+                { "PRESSURE",   "colPressure" },
+                { "CON1 SHORT", "colMcShort" },
+                { "CON1 OPEN",  "colMcOpen" },
+                { "CON2 SHORT", "colTcShort" },
+                { "CON2 OPEN",  "colTcOpen" },
+                { "CON3 SHORT", "colCcShort" },
+                { "CON3 OPEN",  "colCcOpen" },
+                { "R202",       "colR202" },
+                { "R203",       "colR203" },
+                { "R204",       "colR204a" },
+                { "R205",       "colR205" },
+                { "R207",       "colR207" },
+                { "RT201",      "colRT201" },
+                { "C203",       "colC203" },
+                { "C204-C206",  "colC204_6" },
+                { "C207",       "colC207" },
+                { "C208",       "colC208" },
+                { "L201",       "colL201" },
+            };
+
+            string colName;
+            if (columnMap.TryGetValue(result.ItemName, out colName))
+            {
+                object displayValue = result.HasError ? "ERR" : (object)Math.Round(result.MeasuredValue, 2);
+                SetTestResult(chRow, colName, displayValue, result.Pass);
+            }
+        }
+
+        /// <summary>
+        /// 전체 검사 완료 시 최종 판정
+        /// </summary>
+        private void OnTestSequenceCompleted(bool allPass, List<TestResult> results)
+        {
+            button3.Enabled = true;
+            button4.Enabled = false;
+
+            if (allPass)
+            {
+                lblResult.Text = "PASS";
+                lblResult.BackColor = Color.LimeGreen;
+                lblResult.ForeColor = Color.White;
+            }
+            else
+            {
+                lblResult.Text = "FAIL";
+                lblResult.BackColor = Color.Red;
+                lblResult.ForeColor = Color.White;
+            }
+        }
+
+        /// <summary>
+        /// CH1 행의 검사 결과를 초기화
+        /// </summary>
+        private void ClearChRow()
+        {
+            int chRow = 2;
+            if (chRow >= dgvTaskList.Rows.Count) return;
+
+            for (int col = 2; col < dgvTaskList.Columns.Count; col++)
+            {
+                dgvTaskList.Rows[chRow].Cells[col].Value = "";
+                dgvTaskList.Rows[chRow].Cells[col].Style.BackColor = Color.White;
+                dgvTaskList.Rows[chRow].Cells[col].Style.ForeColor = Color.Black;
+            }
+        }
+
+        #endregion
     }
 }

@@ -74,6 +74,16 @@
     <Compile Include="Communications\JigComm.cs" />
     <Compile Include="Communications\LcrMeterComm.cs" />
     <Compile Include="Communications\ControlBoardComm.cs" />
+    <Compile Include="TestSteps\ITestStep.cs" />
+    <Compile Include="TestSteps\TestResult.cs" />
+    <Compile Include="TestSteps\PressureTest.cs" />
+    <Compile Include="TestSteps\LedVoltTest.cs" />
+    <Compile Include="TestSteps\LcrInitialize.cs" />
+    <Compile Include="TestSteps\LcrMeasureTest.cs" />
+    <Compile Include="TestSteps\ColorSensorTest.cs" />
+    <Compile Include="TestSteps\LedVoltageTest.cs" />
+    <Compile Include="TestSteps\OpenShortTest.cs" />
+    <Compile Include="TestSteps\TestSequenceRunner.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\ComSettingForm.resx">
