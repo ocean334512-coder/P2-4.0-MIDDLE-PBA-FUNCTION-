@@ -42,6 +42,7 @@ namespace _20260202_P2_MIDDLE.Forms
             SetupGridColumns(dataGridView1);
             SetupGridColumns(dataGridView2);
             SetupGridColumns(dataGridView3);
+            SetupSpecGrid();
         }
 
         /// <summary>
@@ -105,6 +106,64 @@ namespace _20260202_P2_MIDDLE.Forms
             }
         }
 
+        private void SetupSpecGrid()
+        {
+            var dgv = dataGridView4;
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToDeleteRows = false;
+            dgv.RowHeadersVisible = false;
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.DefaultCellStyle.Font = new Font("맑은 고딕", 9F);
+            dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.RowTemplate.Height = 28;
+
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("맑은 고딕", 9F, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersHeight = 32;
+
+            dgv.Columns["No"].FillWeight = 30;
+            dgv.Columns["TEST"].FillWeight = 65;
+            dgv.Columns["JUDGMENT"].FillWeight = 70;
+            dgv.Columns["ITEM"].FillWeight = 90;
+            dgv.Columns["SETTING"].FillWeight = 55;
+            dgv.Columns["MIN"].FillWeight = 50;
+            dgv.Columns["MAX"].FillWeight = 50;
+
+            foreach (DataGridViewColumn col in dgv.Columns)
+            {
+                if (col.Name == "No" || col.Name == "TEST" || col.Name == "JUDGMENT" || col.Name == "ITEM")
+                    col.ReadOnly = true;
+            }
+
+            dgv.Rows.Clear();
+            object[][] specData = new object[][]
+            {
+                new object[] { 1,  "PRESSURE",  "SET", "PRESSURE",       "",     "",      "" },
+                new object[] { 2,  "R202",      "SET", "R202 [Ω]",       560,    400,     700 },
+                new object[] { 3,  "R203",      "SET", "R203 [Ω]",       560,    400,     700 },
+                new object[] { 4,  "R204",      "SET", "R204 [Ω]",       560,    400,     700 },
+                new object[] { 5,  "R205",      "SET", "R205 [Ω]",       560,    400,     700 },
+                new object[] { 6,  "R207",      "SET", "R207 [Ω]",       10000,  600,     100000 },
+                new object[] { 7,  "RT201",     "SET", "RT201 [Ω]",      10000,  600,     100000 },
+                new object[] { 8,  "C203",      "SET", "C203 [nF]",      100,    50,      100 },
+                new object[] { 9,  "C204-C206", "SET", "C204-C206 [uF]", 20.1,   10,      25 },
+                new object[] { 10, "C207",      "SET", "C207 [nF]",      100,    60,      100 },
+                new object[] { 11, "C208",      "SET", "C208 [uF]",      10,     5,       15 },
+                new object[] { 12, "L201",      "SET", "L201 [Ω]",       0.5,    0.1,     0.6 },
+                new object[] { 13, "D201",      "SET", "D201 [V]",       1.7,    1,       3 },
+                new object[] { 14, "D202",      "SET", "D202 [V]",       1.7,    1,       3 },
+            };
+
+            foreach (var row in specData)
+            {
+                dgv.Rows.Add(row);
+            }
+        }
+
         #endregion
 
         #region 버튼 이벤트 핸들러
@@ -165,29 +224,8 @@ namespace _20260202_P2_MIDDLE.Forms
                 data.CcShort = chbCcShort.Checked;
                 data.CpUse = checkBox1.Checked;
 
-                // SPEC 값
-                data.PressureMin = (int)nudPressureMin.Value;
-                data.PressureMax = (int)nudPressureMax.Value;
-                data.R202Min = (int)nudR202Min.Value;
-                data.R202Max = (int)nudR202Max.Value;
-                data.R203Min = (int)nudR203Min.Value;
-                data.R203Max = (int)nudR203Max.Value;
-                data.R204Min = (int)nudR204Min.Value;
-                data.R204Max = (int)nudR204Max.Value;
-                data.R205Min = (int)nudR205Min.Value;
-                data.R205Max = (int)nudR205Max.Value;
-                data.R207Min = (int)nudR207Min.Value;
-                data.R207Max = (int)nudR207Max.Value;
-                data.RT201Min = (int)nudRT201Min.Value;
-                data.RT201Max = (int)nudRT201Max.Value;
-                data.C203Min = (int)nudC203Min.Value;
-                data.C203Max = (int)nudC203Max.Value;
-                data.C204Min = (int)nudC204Min.Value;
-                data.C204Max = (int)nudC204Max.Value;
-                data.C207Min = (int)nudC207Min.Value;
-                data.C207Max = (int)nudC207Max.Value;
-                data.L201Min = (int)nudL201Min.Value;
-                data.L201Max = (int)nudL201Max.Value;
+                // SPEC 값 (dataGridView4에서 가져오기)
+                data.SpecRows = GetSpecGridData();
 
                 var serializer = new XmlSerializer(typeof(RecipeSettingsData));
                 using (var writer = new StreamWriter(SaveFilePath))
@@ -237,29 +275,8 @@ namespace _20260202_P2_MIDDLE.Forms
                 chbCcShort.Checked = data.CcShort;
                 checkBox1.Checked = data.CpUse;
 
-                // SPEC 값 복원
-                nudPressureMin.Value = data.PressureMin;
-                nudPressureMax.Value = data.PressureMax;
-                nudR202Min.Value = data.R202Min;
-                nudR202Max.Value = data.R202Max;
-                nudR203Min.Value = data.R203Min;
-                nudR203Max.Value = data.R203Max;
-                nudR204Min.Value = data.R204Min;
-                nudR204Max.Value = data.R204Max;
-                nudR205Min.Value = data.R205Min;
-                nudR205Max.Value = data.R205Max;
-                nudR207Min.Value = data.R207Min;
-                nudR207Max.Value = data.R207Max;
-                nudRT201Min.Value = data.RT201Min;
-                nudRT201Max.Value = data.RT201Max;
-                nudC203Min.Value = data.C203Min;
-                nudC203Max.Value = data.C203Max;
-                nudC204Min.Value = data.C204Min;
-                nudC204Max.Value = data.C204Max;
-                nudC207Min.Value = data.C207Min;
-                nudC207Max.Value = data.C207Max;
-                nudL201Min.Value = data.L201Min;
-                nudL201Max.Value = data.L201Max;
+                // SPEC 값 복원 (dataGridView4에 반영)
+                RestoreSpecGridData(data.SpecRows);
             }
             catch (Exception ex)
             {
@@ -304,14 +321,41 @@ namespace _20260202_P2_MIDDLE.Forms
             }
         }
 
+        private List<SpecRowData> GetSpecGridData()
+        {
+            var rows = new List<SpecRowData>();
+            foreach (DataGridViewRow row in dataGridView4.Rows)
+            {
+                rows.Add(new SpecRowData
+                {
+                    No = row.Cells["No"].Value?.ToString() ?? "",
+                    Test = row.Cells["TEST"].Value?.ToString() ?? "",
+                    Judgment = row.Cells["JUDGMENT"].Value?.ToString() ?? "",
+                    Item = row.Cells["ITEM"].Value?.ToString() ?? "",
+                    Setting = row.Cells["SETTING"].Value?.ToString() ?? "",
+                    Min = row.Cells["MIN"].Value?.ToString() ?? "",
+                    Max = row.Cells["MAX"].Value?.ToString() ?? ""
+                });
+            }
+            return rows;
+        }
+
+        private void RestoreSpecGridData(List<SpecRowData> rows)
+        {
+            if (rows == null || rows.Count == 0) return;
+
+            dataGridView4.Rows.Clear();
+            foreach (var r in rows)
+            {
+                dataGridView4.Rows.Add(r.No, r.Test, r.Judgment, r.Item, r.Setting, r.Min, r.Max);
+            }
+        }
+
         #endregion
     }
 
     #region 저장 데이터 클래스
 
-    /// <summary>
-    /// DataGridView 한 행의 데이터
-    /// </summary>
     [Serializable]
     public class GridRowData
     {
@@ -321,23 +365,29 @@ namespace _20260202_P2_MIDDLE.Forms
         public string OpenPin { get; set; }
     }
 
-    /// <summary>
-    /// RecipeSettingForm 전체 설정 데이터
-    /// </summary>
+    [Serializable]
+    public class SpecRowData
+    {
+        public string No { get; set; }
+        public string Test { get; set; }
+        public string Judgment { get; set; }
+        public string Item { get; set; }
+        public string Setting { get; set; }
+        public string Min { get; set; }
+        public string Max { get; set; }
+    }
+
     [Serializable]
     public class RecipeSettingsData
     {
-        // Grid Count
         public int Con1Count { get; set; }
         public int Con2Count { get; set; }
         public int Con3Count { get; set; }
 
-        // Grid Row 데이터
         public List<GridRowData> Con1Rows { get; set; } = new List<GridRowData>();
         public List<GridRowData> Con2Rows { get; set; } = new List<GridRowData>();
         public List<GridRowData> Con3Rows { get; set; } = new List<GridRowData>();
 
-        // Test Items 체크박스
         public bool PressureUse { get; set; }
         public bool McOpen { get; set; }
         public bool McShort { get; set; }
@@ -347,29 +397,7 @@ namespace _20260202_P2_MIDDLE.Forms
         public bool CcShort { get; set; }
         public bool CpUse { get; set; }
 
-        // SPEC 값 (Min/Max)
-        public int PressureMin { get; set; }
-        public int PressureMax { get; set; }
-        public int R202Min { get; set; }
-        public int R202Max { get; set; }
-        public int R203Min { get; set; }
-        public int R203Max { get; set; }
-        public int R204Min { get; set; }
-        public int R204Max { get; set; }
-        public int R205Min { get; set; }
-        public int R205Max { get; set; }
-        public int R207Min { get; set; }
-        public int R207Max { get; set; }
-        public int RT201Min { get; set; }
-        public int RT201Max { get; set; }
-        public int C203Min { get; set; }
-        public int C203Max { get; set; }
-        public int C204Min { get; set; }
-        public int C204Max { get; set; }
-        public int C207Min { get; set; }
-        public int C207Max { get; set; }
-        public int L201Min { get; set; }
-        public int L201Max { get; set; }
+        public List<SpecRowData> SpecRows { get; set; } = new List<SpecRowData>();
     }
 
     #endregion

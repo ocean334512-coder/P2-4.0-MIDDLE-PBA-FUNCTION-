@@ -64,26 +64,18 @@ namespace _20260202_P2_MIDDLE
             this.lblTextMcuNo = new System.Windows.Forms.Label();
             this.PboxITM = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dgvTaskList = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.tboxLog = new System.Windows.Forms.RichTextBox();
-            this.lblClearLog = new System.Windows.Forms.LinkLabel();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
-            this.tboxComm = new System.Windows.Forms.RichTextBox();
-            this.lblClearComm = new System.Windows.Forms.LinkLabel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgvTaskList = new System.Windows.Forms.DataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -96,13 +88,9 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PboxITM)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
-            this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaskList)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.tableLayoutPanel15.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tableLayoutPanel16.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -130,11 +118,11 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.276385F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.55353F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0.9111617F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.19818F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.325501F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.431237F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.60401F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0.829302F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.15549F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 138F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -148,11 +136,11 @@ namespace _20260202_P2_MIDDLE
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.tableLayoutPanel4);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(41, 152);
+            this.groupBox1.Location = new System.Drawing.Point(41, 113);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(41, 8, 41, 18);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.groupBox1.Size = new System.Drawing.Size(2857, 93);
+            this.groupBox1.Size = new System.Drawing.Size(2857, 95);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Recipe";
@@ -176,7 +164,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(2845, 56);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(2845, 58);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // label2
@@ -189,7 +177,7 @@ namespace _20260202_P2_MIDDLE
             this.label2.Location = new System.Drawing.Point(1246, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 56);
+            this.label2.Size = new System.Drawing.Size(197, 58);
             this.label2.TabIndex = 6;
             this.label2.Text = "Recipe File";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -204,7 +192,7 @@ namespace _20260202_P2_MIDDLE
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(306, 56);
+            this.label1.Size = new System.Drawing.Size(306, 58);
             this.label1.TabIndex = 4;
             this.label1.Text = "Recipe File";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -220,7 +208,7 @@ namespace _20260202_P2_MIDDLE
             this.btnRecipeOpen.Location = new System.Drawing.Point(2570, 0);
             this.btnRecipeOpen.Margin = new System.Windows.Forms.Padding(6, 0, 6, 8);
             this.btnRecipeOpen.Name = "btnRecipeOpen";
-            this.btnRecipeOpen.Size = new System.Drawing.Size(269, 48);
+            this.btnRecipeOpen.Size = new System.Drawing.Size(269, 50);
             this.btnRecipeOpen.TabIndex = 8;
             this.btnRecipeOpen.Text = "Select Recipe";
             this.btnRecipeOpen.UseVisualStyleBackColor = false;
@@ -234,7 +222,7 @@ namespace _20260202_P2_MIDDLE
             this.tboxRecipeFile.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
             this.tboxRecipeFile.Multiline = false;
             this.tboxRecipeFile.Name = "tboxRecipeFile";
-            this.tboxRecipeFile.Size = new System.Drawing.Size(925, 56);
+            this.tboxRecipeFile.Size = new System.Drawing.Size(925, 58);
             this.tboxRecipeFile.TabIndex = 9;
             this.tboxRecipeFile.Text = "";
             // 
@@ -247,7 +235,7 @@ namespace _20260202_P2_MIDDLE
             this.tboxRecipeFilePath.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
             this.tboxRecipeFilePath.Multiline = false;
             this.tboxRecipeFilePath.Name = "tboxRecipeFilePath";
-            this.tboxRecipeFilePath.Size = new System.Drawing.Size(1112, 56);
+            this.tboxRecipeFilePath.Size = new System.Drawing.Size(1112, 58);
             this.tboxRecipeFilePath.TabIndex = 10;
             this.tboxRecipeFilePath.Text = "";
             // 
@@ -255,14 +243,14 @@ namespace _20260202_P2_MIDDLE
             // 
             this.groupBox6.Controls.Add(this.tabControl5);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox6.Location = new System.Drawing.Point(6, 1199);
+            this.groupBox6.Location = new System.Drawing.Point(6, 1085);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.groupBox6.Size = new System.Drawing.Size(2927, 245);
+            this.groupBox6.Size = new System.Drawing.Size(2927, 359);
             this.groupBox6.TabIndex = 7;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "JIG Communication";
+            this.groupBox6.Text = "Communication";
             // 
             // tabControl5
             // 
@@ -273,7 +261,7 @@ namespace _20260202_P2_MIDDLE
             this.tabControl5.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(2915, 218);
+            this.tabControl5.Size = new System.Drawing.Size(2915, 332);
             this.tabControl5.TabIndex = 0;
             // 
             // tabPage13
@@ -283,7 +271,7 @@ namespace _20260202_P2_MIDDLE
             this.tabPage13.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tabPage13.Size = new System.Drawing.Size(2907, 186);
+            this.tabPage13.Size = new System.Drawing.Size(2907, 300);
             this.tabPage13.TabIndex = 0;
             this.tabPage13.Text = "Log";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -302,7 +290,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel22.RowCount = 2;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(2895, 180);
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(2895, 294);
             this.tableLayoutPanel22.TabIndex = 1;
             // 
             // tboxJigLog
@@ -313,7 +301,7 @@ namespace _20260202_P2_MIDDLE
             this.tboxJigLog.Location = new System.Drawing.Point(6, 39);
             this.tboxJigLog.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tboxJigLog.Name = "tboxJigLog";
-            this.tboxJigLog.Size = new System.Drawing.Size(2883, 138);
+            this.tboxJigLog.Size = new System.Drawing.Size(2883, 252);
             this.tboxJigLog.TabIndex = 2;
             this.tboxJigLog.Text = "";
             // 
@@ -337,7 +325,7 @@ namespace _20260202_P2_MIDDLE
             this.tabPage14.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tabPage14.Size = new System.Drawing.Size(2532, 186);
+            this.tabPage14.Size = new System.Drawing.Size(2907, 185);
             this.tabPage14.TabIndex = 1;
             this.tabPage14.Text = "Comm";
             this.tabPage14.UseVisualStyleBackColor = true;
@@ -356,7 +344,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel31.RowCount = 2;
             this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel31.Size = new System.Drawing.Size(2520, 180);
+            this.tableLayoutPanel31.Size = new System.Drawing.Size(2895, 179);
             this.tableLayoutPanel31.TabIndex = 1;
             // 
             // tboxJigComm
@@ -367,7 +355,7 @@ namespace _20260202_P2_MIDDLE
             this.tboxJigComm.Location = new System.Drawing.Point(6, 39);
             this.tboxJigComm.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tboxJigComm.Name = "tboxJigComm";
-            this.tboxJigComm.Size = new System.Drawing.Size(2508, 138);
+            this.tboxJigComm.Size = new System.Drawing.Size(2883, 137);
             this.tboxJigComm.TabIndex = 2;
             this.tboxJigComm.Text = "";
             // 
@@ -375,7 +363,7 @@ namespace _20260202_P2_MIDDLE
             // 
             this.lblClearJigComm.AutoSize = true;
             this.lblClearJigComm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblClearJigComm.Location = new System.Drawing.Point(2383, 0);
+            this.lblClearJigComm.Location = new System.Drawing.Point(2758, 0);
             this.lblClearJigComm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblClearJigComm.Name = "lblClearJigComm";
             this.lblClearJigComm.Size = new System.Drawing.Size(131, 36);
@@ -416,7 +404,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(2939, 144);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(2939, 105);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // btnManualOpen
@@ -430,7 +418,7 @@ namespace _20260202_P2_MIDDLE
             this.btnManualOpen.Location = new System.Drawing.Point(2728, 10);
             this.btnManualOpen.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.btnManualOpen.Name = "btnManualOpen";
-            this.btnManualOpen.Size = new System.Drawing.Size(191, 124);
+            this.btnManualOpen.Size = new System.Drawing.Size(191, 85);
             this.btnManualOpen.TabIndex = 11;
             this.btnManualOpen.Text = "Manual";
             this.btnManualOpen.UseVisualStyleBackColor = false;
@@ -446,7 +434,7 @@ namespace _20260202_P2_MIDDLE
             this.btnCalibrationOpen.Location = new System.Drawing.Point(2499, 10);
             this.btnCalibrationOpen.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.btnCalibrationOpen.Name = "btnCalibrationOpen";
-            this.btnCalibrationOpen.Size = new System.Drawing.Size(189, 124);
+            this.btnCalibrationOpen.Size = new System.Drawing.Size(189, 85);
             this.btnCalibrationOpen.TabIndex = 10;
             this.btnCalibrationOpen.Text = "Calibration";
             this.btnCalibrationOpen.UseVisualStyleBackColor = false;
@@ -462,7 +450,7 @@ namespace _20260202_P2_MIDDLE
             this.btnRecipeSettingsOpen.Location = new System.Drawing.Point(2270, 10);
             this.btnRecipeSettingsOpen.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.btnRecipeSettingsOpen.Name = "btnRecipeSettingsOpen";
-            this.btnRecipeSettingsOpen.Size = new System.Drawing.Size(189, 124);
+            this.btnRecipeSettingsOpen.Size = new System.Drawing.Size(189, 85);
             this.btnRecipeSettingsOpen.TabIndex = 9;
             this.btnRecipeSettingsOpen.Text = "Setting";
             this.btnRecipeSettingsOpen.UseVisualStyleBackColor = false;
@@ -479,7 +467,7 @@ namespace _20260202_P2_MIDDLE
             this.btnComSettingsOpen.Location = new System.Drawing.Point(2041, 10);
             this.btnComSettingsOpen.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.btnComSettingsOpen.Name = "btnComSettingsOpen";
-            this.btnComSettingsOpen.Size = new System.Drawing.Size(189, 124);
+            this.btnComSettingsOpen.Size = new System.Drawing.Size(189, 85);
             this.btnComSettingsOpen.TabIndex = 8;
             this.btnComSettingsOpen.Text = "COM Settings";
             this.btnComSettingsOpen.UseVisualStyleBackColor = false;
@@ -495,7 +483,7 @@ namespace _20260202_P2_MIDDLE
             this.lblValueModel.Location = new System.Drawing.Point(1800, 21);
             this.lblValueModel.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblValueModel.Name = "lblValueModel";
-            this.lblValueModel.Size = new System.Drawing.Size(201, 102);
+            this.lblValueModel.Size = new System.Drawing.Size(201, 63);
             this.lblValueModel.TabIndex = 7;
             this.lblValueModel.Text = "-";
             this.lblValueModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -510,7 +498,7 @@ namespace _20260202_P2_MIDDLE
             this.lblTextModel.Location = new System.Drawing.Point(1571, 21);
             this.lblTextModel.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblTextModel.Name = "lblTextModel";
-            this.lblTextModel.Size = new System.Drawing.Size(189, 102);
+            this.lblTextModel.Size = new System.Drawing.Size(189, 63);
             this.lblTextModel.TabIndex = 6;
             this.lblTextModel.Text = "Model";
             this.lblTextModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -525,7 +513,7 @@ namespace _20260202_P2_MIDDLE
             this.lblValueLotNo.Location = new System.Drawing.Point(1330, 21);
             this.lblValueLotNo.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblValueLotNo.Name = "lblValueLotNo";
-            this.lblValueLotNo.Size = new System.Drawing.Size(201, 102);
+            this.lblValueLotNo.Size = new System.Drawing.Size(201, 63);
             this.lblValueLotNo.TabIndex = 5;
             this.lblValueLotNo.Text = "-";
             this.lblValueLotNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -540,7 +528,7 @@ namespace _20260202_P2_MIDDLE
             this.lblTextLotNo.Location = new System.Drawing.Point(1101, 21);
             this.lblTextLotNo.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblTextLotNo.Name = "lblTextLotNo";
-            this.lblTextLotNo.Size = new System.Drawing.Size(189, 102);
+            this.lblTextLotNo.Size = new System.Drawing.Size(189, 63);
             this.lblTextLotNo.TabIndex = 4;
             this.lblTextLotNo.Text = "Lot No.";
             this.lblTextLotNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -555,7 +543,7 @@ namespace _20260202_P2_MIDDLE
             this.lblValueMcuNo.Location = new System.Drawing.Point(860, 21);
             this.lblValueMcuNo.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblValueMcuNo.Name = "lblValueMcuNo";
-            this.lblValueMcuNo.Size = new System.Drawing.Size(201, 102);
+            this.lblValueMcuNo.Size = new System.Drawing.Size(201, 63);
             this.lblValueMcuNo.TabIndex = 3;
             this.lblValueMcuNo.Text = "-";
             this.lblValueMcuNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -570,7 +558,7 @@ namespace _20260202_P2_MIDDLE
             this.lblTextMcuNo.Location = new System.Drawing.Point(631, 21);
             this.lblTextMcuNo.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblTextMcuNo.Name = "lblTextMcuNo";
-            this.lblTextMcuNo.Size = new System.Drawing.Size(189, 102);
+            this.lblTextMcuNo.Size = new System.Drawing.Size(189, 63);
             this.lblTextMcuNo.TabIndex = 2;
             this.lblTextMcuNo.Text = "Mcu No.";
             this.lblTextMcuNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -583,7 +571,7 @@ namespace _20260202_P2_MIDDLE
             this.PboxITM.Location = new System.Drawing.Point(11, 10);
             this.PboxITM.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.PboxITM.Name = "PboxITM";
-            this.PboxITM.Size = new System.Drawing.Size(589, 124);
+            this.PboxITM.Size = new System.Drawing.Size(589, 85);
             this.PboxITM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PboxITM.TabIndex = 1;
             this.PboxITM.TabStop = false;
@@ -600,28 +588,74 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel5.Controls.Add(this.lblResult, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 1, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 267);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 230);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.44737F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.55264F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.44304F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.55696F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(2931, 912);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(2931, 837);
             this.tableLayoutPanel5.TabIndex = 9;
             // 
-            // tabControl1
+            // button4
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 167);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(0, 18, 0, 18);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(2344, 727);
-            this.tabControl1.TabIndex = 17;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button4.Location = new System.Drawing.Point(2641, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(286, 79);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "Stop";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button3.Location = new System.Drawing.Point(2348, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(285, 79);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Start";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblResult.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblResult.Location = new System.Drawing.Point(3, 0);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(2338, 87);
+            this.lblResult.TabIndex = 18;
+            this.lblResult.Text = "-";
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel5.SetColumnSpan(this.tableLayoutPanel6, 2);
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(2347, 90);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 757F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(581, 744);
+            this.tableLayoutPanel6.TabIndex = 19;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // tabPage1
             // 
@@ -630,7 +664,7 @@ namespace _20260202_P2_MIDDLE
             this.tabPage1.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tabPage1.Size = new System.Drawing.Size(2336, 695);
+            this.tabPage1.Size = new System.Drawing.Size(2336, 682);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "TaskList";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -672,26 +706,8 @@ namespace _20260202_P2_MIDDLE
             this.dgvTaskList.RowHeadersVisible = false;
             this.dgvTaskList.RowHeadersWidth = 51;
             this.dgvTaskList.RowTemplate.Height = 27;
-            this.dgvTaskList.Size = new System.Drawing.Size(2324, 689);
+            this.dgvTaskList.Size = new System.Drawing.Size(2324, 676);
             this.dgvTaskList.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
             // 
             // Column4
             // 
@@ -699,170 +715,34 @@ namespace _20260202_P2_MIDDLE
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             // 
-            // tabPage2
+            // Column3
             // 
-            this.tabPage2.Controls.Add(this.tableLayoutPanel15);
-            this.tabPage2.Location = new System.Drawing.Point(4, 28);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tabPage2.Size = new System.Drawing.Size(2036, 695);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Log";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.Column3.HeaderText = "Column3";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
             // 
-            // tableLayoutPanel15
+            // Column2
             // 
-            this.tableLayoutPanel15.ColumnCount = 2;
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
-            this.tableLayoutPanel15.Controls.Add(this.tboxLog, 0, 1);
-            this.tableLayoutPanel15.Controls.Add(this.lblClearLog, 1, 0);
-            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(6, 3);
-            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
-            this.tableLayoutPanel15.RowCount = 2;
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(2024, 689);
-            this.tableLayoutPanel15.TabIndex = 0;
+            this.Column2.HeaderText = "Column2";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
             // 
-            // tboxLog
+            // Column1
             // 
-            this.tableLayoutPanel15.SetColumnSpan(this.tboxLog, 2);
-            this.tboxLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tboxLog.Location = new System.Drawing.Point(6, 39);
-            this.tboxLog.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tboxLog.Name = "tboxLog";
-            this.tboxLog.Size = new System.Drawing.Size(2012, 647);
-            this.tboxLog.TabIndex = 2;
-            this.tboxLog.Text = "";
+            this.Column1.HeaderText = "Column1";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
             // 
-            // lblClearLog
+            // tabControl1
             // 
-            this.lblClearLog.AutoSize = true;
-            this.lblClearLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblClearLog.Location = new System.Drawing.Point(1881, 0);
-            this.lblClearLog.Margin = new System.Windows.Forms.Padding(0);
-            this.lblClearLog.Name = "lblClearLog";
-            this.lblClearLog.Size = new System.Drawing.Size(143, 36);
-            this.lblClearLog.TabIndex = 1;
-            this.lblClearLog.TabStop = true;
-            this.lblClearLog.Text = "Clear";
-            this.lblClearLog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.tableLayoutPanel16);
-            this.tabPage3.Location = new System.Drawing.Point(4, 28);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tabPage3.Size = new System.Drawing.Size(2036, 695);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Comm";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel16
-            // 
-            this.tableLayoutPanel16.ColumnCount = 2;
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
-            this.tableLayoutPanel16.Controls.Add(this.tboxComm, 0, 1);
-            this.tableLayoutPanel16.Controls.Add(this.lblClearComm, 1, 0);
-            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(6, 3);
-            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
-            this.tableLayoutPanel16.RowCount = 2;
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(2024, 689);
-            this.tableLayoutPanel16.TabIndex = 0;
-            // 
-            // tboxComm
-            // 
-            this.tableLayoutPanel16.SetColumnSpan(this.tboxComm, 2);
-            this.tboxComm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tboxComm.Location = new System.Drawing.Point(6, 39);
-            this.tboxComm.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tboxComm.Name = "tboxComm";
-            this.tboxComm.Size = new System.Drawing.Size(2012, 647);
-            this.tboxComm.TabIndex = 3;
-            this.tboxComm.Text = "";
-            // 
-            // lblClearComm
-            // 
-            this.lblClearComm.AutoSize = true;
-            this.lblClearComm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblClearComm.Location = new System.Drawing.Point(1881, 0);
-            this.lblClearComm.Margin = new System.Windows.Forms.Padding(0);
-            this.lblClearComm.Name = "lblClearComm";
-            this.lblClearComm.Size = new System.Drawing.Size(143, 36);
-            this.lblClearComm.TabIndex = 2;
-            this.lblClearComm.TabStop = true;
-            this.lblClearComm.Text = "Clear";
-            this.lblClearComm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button4.Location = new System.Drawing.Point(2641, 4);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(286, 141);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Stop";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button3.Location = new System.Drawing.Point(2348, 4);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(285, 141);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Start";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // lblResult
-            // 
-            this.lblResult.AutoSize = true;
-            this.lblResult.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblResult.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblResult.Location = new System.Drawing.Point(3, 0);
-            this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(2338, 149);
-            this.lblResult.TabIndex = 18;
-            this.lblResult.Text = "-";
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel5.SetColumnSpan(this.tableLayoutPanel6, 2);
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(2347, 152);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 757F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(581, 757);
-            this.tableLayoutPanel6.TabIndex = 19;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 105);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(0, 18, 0, 18);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(2344, 714);
+            this.tabControl1.TabIndex = 17;
             // 
             // Form1
             // 
@@ -872,7 +752,7 @@ namespace _20260202_P2_MIDDLE
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "P2 4.0 MIDDLE FUNCTION";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -891,15 +771,9 @@ namespace _20260202_P2_MIDDLE
             ((System.ComponentModel.ISupportInitialize)(this.PboxITM)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaskList)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tableLayoutPanel15.ResumeLayout(false);
-            this.tableLayoutPanel15.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tableLayoutPanel16.ResumeLayout(false);
-            this.tableLayoutPanel16.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -941,6 +815,8 @@ namespace _20260202_P2_MIDDLE
         private System.Windows.Forms.Button btnRecipeOpen;
         private System.Windows.Forms.RichTextBox tboxRecipeFile;
         private System.Windows.Forms.RichTextBox tboxRecipeFilePath;
+        private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dgvTaskList;
@@ -948,16 +824,6 @@ namespace _20260202_P2_MIDDLE
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
-        private System.Windows.Forms.RichTextBox tboxLog;
-        private System.Windows.Forms.LinkLabel lblClearLog;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
-        private System.Windows.Forms.RichTextBox tboxComm;
-        private System.Windows.Forms.LinkLabel lblClearComm;
-        private System.Windows.Forms.Label lblResult;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
     }
 }
 

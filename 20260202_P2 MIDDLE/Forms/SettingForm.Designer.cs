@@ -29,8 +29,8 @@ namespace _20260202_P2_MIDDLE.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grboxOS = new System.Windows.Forms.GroupBox();
+            this.GboxCon3 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,7 +39,7 @@ namespace _20260202_P2_MIDDLE.Forms
             this.NumberCon3 = new System.Windows.Forms.NumericUpDown();
             this.BtnCon3Set = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.GboxCon2 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,9 +71,9 @@ namespace _20260202_P2_MIDDLE.Forms
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.chbRLC_c = new System.Windows.Forms.CheckBox();
+            this.chbRLC_l = new System.Windows.Forms.CheckBox();
+            this.chbRLC_r = new System.Windows.Forms.CheckBox();
             this.grbOSTest = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.chbMcShort = new System.Windows.Forms.CheckBox();
@@ -86,62 +86,20 @@ namespace _20260202_P2_MIDDLE.Forms
             this.chbCcOpen = new System.Windows.Forms.CheckBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.nudC208Max = new System.Windows.Forms.NumericUpDown();
-            this.nudC208Min = new System.Windows.Forms.NumericUpDown();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.nudL201Max = new System.Windows.Forms.NumericUpDown();
-            this.nudL201Min = new System.Windows.Forms.NumericUpDown();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.nudC207Max = new System.Windows.Forms.NumericUpDown();
-            this.nudC207Min = new System.Windows.Forms.NumericUpDown();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.nudC204Max = new System.Windows.Forms.NumericUpDown();
-            this.nudC204Min = new System.Windows.Forms.NumericUpDown();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.nudC203Max = new System.Windows.Forms.NumericUpDown();
-            this.nudC203Min = new System.Windows.Forms.NumericUpDown();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.nudRT201Max = new System.Windows.Forms.NumericUpDown();
-            this.nudRT201Min = new System.Windows.Forms.NumericUpDown();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.nudR207Max = new System.Windows.Forms.NumericUpDown();
-            this.nudR207Min = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.nudR205Max = new System.Windows.Forms.NumericUpDown();
-            this.nudR205Min = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.nudR204Max = new System.Windows.Forms.NumericUpDown();
-            this.nudR204Min = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.nudR203Max = new System.Windows.Forms.NumericUpDown();
-            this.nudR203Min = new System.Windows.Forms.NumericUpDown();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.nudR202Max = new System.Windows.Forms.NumericUpDown();
-            this.nudR202Min = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.nudPressureMax = new System.Windows.Forms.NumericUpDown();
-            this.nudPressureMin = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grbSpec = new System.Windows.Forms.GroupBox();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEST = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JUDGMENT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SETTING = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MAX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grboxOS.SuspendLayout();
+            this.GboxCon3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberCon3)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.GboxCon2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberCon2)).BeginInit();
             this.GboxCon1.SuspendLayout();
@@ -161,61 +119,39 @@ namespace _20260202_P2_MIDDLE.Forms
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox11.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC208Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC208Min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudL201Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudL201Min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC207Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC207Min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC204Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC204Min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC203Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC203Min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRT201Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRT201Min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR207Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR207Min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR205Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR205Min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR204Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR204Min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR203Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR203Min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR202Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR202Min)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPressureMax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPressureMin)).BeginInit();
+            this.grbSpec.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox3
+            // grboxOS
             // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox3.Controls.Add(this.groupBox2);
-            this.groupBox3.Controls.Add(this.groupBox1);
-            this.groupBox3.Controls.Add(this.GboxCon1);
-            this.groupBox3.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox3.Location = new System.Drawing.Point(25, 304);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(2403, 950);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Open/Short";
+            this.grboxOS.BackColor = System.Drawing.SystemColors.Control;
+            this.grboxOS.Controls.Add(this.GboxCon3);
+            this.grboxOS.Controls.Add(this.GboxCon2);
+            this.grboxOS.Controls.Add(this.GboxCon1);
+            this.grboxOS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.grboxOS.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.grboxOS.Location = new System.Drawing.Point(25, 267);
+            this.grboxOS.Name = "grboxOS";
+            this.grboxOS.Size = new System.Drawing.Size(2403, 756);
+            this.grboxOS.TabIndex = 6;
+            this.grboxOS.TabStop = false;
+            this.grboxOS.Text = "O/S TEST";
             // 
-            // groupBox2
+            // GboxCon3
             // 
-            this.groupBox2.Controls.Add(this.dataGridView3);
-            this.groupBox2.Controls.Add(this.NumberCon3);
-            this.groupBox2.Controls.Add(this.BtnCon3Set);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(1439, 43);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(789, 852);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Con3";
+            this.GboxCon3.Controls.Add(this.dataGridView3);
+            this.GboxCon3.Controls.Add(this.NumberCon3);
+            this.GboxCon3.Controls.Add(this.BtnCon3Set);
+            this.GboxCon3.Controls.Add(this.label3);
+            this.GboxCon3.Location = new System.Drawing.Point(1439, 43);
+            this.GboxCon3.Margin = new System.Windows.Forms.Padding(4);
+            this.GboxCon3.Name = "GboxCon3";
+            this.GboxCon3.Padding = new System.Windows.Forms.Padding(4);
+            this.GboxCon3.Size = new System.Drawing.Size(789, 706);
+            this.GboxCon3.TabIndex = 8;
+            this.GboxCon3.TabStop = false;
+            this.GboxCon3.Text = "CARTRIDGE CON";
             // 
             // dataGridView3
             // 
@@ -230,7 +166,7 @@ namespace _20260202_P2_MIDDLE.Forms
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.RowTemplate.Height = 23;
-            this.dataGridView3.Size = new System.Drawing.Size(726, 750);
+            this.dataGridView3.Size = new System.Drawing.Size(726, 601);
             this.dataGridView3.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn5
@@ -294,20 +230,20 @@ namespace _20260202_P2_MIDDLE.Forms
             this.label3.Text = "COUNT";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox1
+            // GboxCon2
             // 
-            this.groupBox1.Controls.Add(this.dataGridView2);
-            this.groupBox1.Controls.Add(this.NumberCon2);
-            this.groupBox1.Controls.Add(this.BtnCon2Set);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(734, 43);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(697, 852);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Con2";
+            this.GboxCon2.Controls.Add(this.dataGridView2);
+            this.GboxCon2.Controls.Add(this.NumberCon2);
+            this.GboxCon2.Controls.Add(this.BtnCon2Set);
+            this.GboxCon2.Controls.Add(this.label2);
+            this.GboxCon2.Location = new System.Drawing.Point(734, 43);
+            this.GboxCon2.Margin = new System.Windows.Forms.Padding(4);
+            this.GboxCon2.Name = "GboxCon2";
+            this.GboxCon2.Padding = new System.Windows.Forms.Padding(4);
+            this.GboxCon2.Size = new System.Drawing.Size(697, 706);
+            this.GboxCon2.TabIndex = 7;
+            this.GboxCon2.TabStop = false;
+            this.GboxCon2.Text = "TOP CON";
             // 
             // dataGridView2
             // 
@@ -322,7 +258,7 @@ namespace _20260202_P2_MIDDLE.Forms
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(669, 750);
+            this.dataGridView2.Size = new System.Drawing.Size(669, 601);
             this.dataGridView2.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
@@ -396,10 +332,10 @@ namespace _20260202_P2_MIDDLE.Forms
             this.GboxCon1.Margin = new System.Windows.Forms.Padding(4);
             this.GboxCon1.Name = "GboxCon1";
             this.GboxCon1.Padding = new System.Windows.Forms.Padding(4);
-            this.GboxCon1.Size = new System.Drawing.Size(706, 852);
+            this.GboxCon1.Size = new System.Drawing.Size(706, 706);
             this.GboxCon1.TabIndex = 6;
             this.GboxCon1.TabStop = false;
-            this.GboxCon1.Text = "Con1";
+            this.GboxCon1.Text = "MAIN CON";
             // 
             // dataGridView1
             // 
@@ -414,7 +350,7 @@ namespace _20260202_P2_MIDDLE.Forms
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(676, 750);
+            this.dataGridView1.Size = new System.Drawing.Size(676, 601);
             this.dataGridView1.TabIndex = 3;
             // 
             // Check
@@ -489,7 +425,7 @@ namespace _20260202_P2_MIDDLE.Forms
             this.groupBox4.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox4.Location = new System.Drawing.Point(25, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(2403, 286);
+            this.groupBox4.Size = new System.Drawing.Size(2403, 249);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Test Items";
@@ -499,7 +435,7 @@ namespace _20260202_P2_MIDDLE.Forms
             this.groupBox18.Controls.Add(this.groupBox19);
             this.groupBox18.Location = new System.Drawing.Point(1473, 35);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(288, 245);
+            this.groupBox18.Size = new System.Drawing.Size(288, 209);
             this.groupBox18.TabIndex = 19;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "ADC VOLATE";
@@ -511,7 +447,7 @@ namespace _20260202_P2_MIDDLE.Forms
             this.groupBox19.Controls.Add(this.checkBox6);
             this.groupBox19.Location = new System.Drawing.Point(6, 48);
             this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(254, 191);
+            this.groupBox19.Size = new System.Drawing.Size(254, 152);
             this.groupBox19.TabIndex = 14;
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "VOLT";
@@ -554,7 +490,7 @@ namespace _20260202_P2_MIDDLE.Forms
             this.groupBox16.Controls.Add(this.groupBox17);
             this.groupBox16.Location = new System.Drawing.Point(1164, 35);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(288, 245);
+            this.groupBox16.Size = new System.Drawing.Size(288, 209);
             this.groupBox16.TabIndex = 18;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "COLOR SENSOR";
@@ -564,7 +500,7 @@ namespace _20260202_P2_MIDDLE.Forms
             this.groupBox17.Controls.Add(this.checkBox5);
             this.groupBox17.Location = new System.Drawing.Point(6, 48);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(276, 191);
+            this.groupBox17.Size = new System.Drawing.Size(276, 152);
             this.groupBox17.TabIndex = 14;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "I2C";
@@ -585,7 +521,7 @@ namespace _20260202_P2_MIDDLE.Forms
             this.groupBox14.Controls.Add(this.groupBox15);
             this.groupBox14.Location = new System.Drawing.Point(884, 35);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(264, 245);
+            this.groupBox14.Size = new System.Drawing.Size(264, 209);
             this.groupBox14.TabIndex = 17;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "PRESSURE SENSOR";
@@ -595,7 +531,7 @@ namespace _20260202_P2_MIDDLE.Forms
             this.groupBox15.Controls.Add(this.checkBox7);
             this.groupBox15.Location = new System.Drawing.Point(6, 48);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(230, 191);
+            this.groupBox15.Size = new System.Drawing.Size(230, 152);
             this.groupBox15.TabIndex = 14;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "I2C";
@@ -616,55 +552,55 @@ namespace _20260202_P2_MIDDLE.Forms
             this.groupBox12.Controls.Add(this.groupBox13);
             this.groupBox12.Location = new System.Drawing.Point(603, 35);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(264, 245);
+            this.groupBox12.Size = new System.Drawing.Size(264, 209);
             this.groupBox12.TabIndex = 16;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "COMPONENT";
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.checkBox4);
-            this.groupBox13.Controls.Add(this.checkBox3);
-            this.groupBox13.Controls.Add(this.checkBox2);
+            this.groupBox13.Controls.Add(this.chbRLC_c);
+            this.groupBox13.Controls.Add(this.chbRLC_l);
+            this.groupBox13.Controls.Add(this.chbRLC_r);
             this.groupBox13.Location = new System.Drawing.Point(6, 48);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(230, 191);
+            this.groupBox13.Size = new System.Drawing.Size(230, 152);
             this.groupBox13.TabIndex = 14;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "RLC";
             // 
-            // checkBox4
+            // chbRLC_c
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.checkBox4.Location = new System.Drawing.Point(6, 120);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(51, 32);
-            this.checkBox4.TabIndex = 4;
-            this.checkBox4.Text = "C";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chbRLC_c.AutoSize = true;
+            this.chbRLC_c.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.chbRLC_c.Location = new System.Drawing.Point(6, 120);
+            this.chbRLC_c.Name = "chbRLC_c";
+            this.chbRLC_c.Size = new System.Drawing.Size(51, 32);
+            this.chbRLC_c.TabIndex = 4;
+            this.chbRLC_c.Text = "C";
+            this.chbRLC_c.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // chbRLC_l
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.checkBox3.Location = new System.Drawing.Point(6, 82);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(48, 32);
-            this.checkBox3.TabIndex = 3;
-            this.checkBox3.Text = "L";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chbRLC_l.AutoSize = true;
+            this.chbRLC_l.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.chbRLC_l.Location = new System.Drawing.Point(6, 82);
+            this.chbRLC_l.Name = "chbRLC_l";
+            this.chbRLC_l.Size = new System.Drawing.Size(48, 32);
+            this.chbRLC_l.TabIndex = 3;
+            this.chbRLC_l.Text = "L";
+            this.chbRLC_l.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chbRLC_r
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.checkBox2.Location = new System.Drawing.Point(6, 44);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(50, 32);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "R";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chbRLC_r.AutoSize = true;
+            this.chbRLC_r.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.chbRLC_r.Location = new System.Drawing.Point(6, 44);
+            this.chbRLC_r.Name = "chbRLC_r";
+            this.chbRLC_r.Size = new System.Drawing.Size(50, 32);
+            this.chbRLC_r.TabIndex = 2;
+            this.chbRLC_r.Text = "R";
+            this.chbRLC_r.UseVisualStyleBackColor = true;
             // 
             // grbOSTest
             // 
@@ -674,7 +610,7 @@ namespace _20260202_P2_MIDDLE.Forms
             this.grbOSTest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.grbOSTest.Location = new System.Drawing.Point(6, 35);
             this.grbOSTest.Name = "grbOSTest";
-            this.grbOSTest.Size = new System.Drawing.Size(582, 245);
+            this.grbOSTest.Size = new System.Drawing.Size(582, 209);
             this.grbOSTest.TabIndex = 15;
             this.grbOSTest.TabStop = false;
             this.grbOSTest.Text = "O/S TEST";
@@ -685,7 +621,7 @@ namespace _20260202_P2_MIDDLE.Forms
             this.groupBox7.Controls.Add(this.chbMcOpen);
             this.groupBox7.Location = new System.Drawing.Point(6, 48);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(142, 191);
+            this.groupBox7.Size = new System.Drawing.Size(142, 152);
             this.groupBox7.TabIndex = 10;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "MAIN CON";
@@ -718,7 +654,7 @@ namespace _20260202_P2_MIDDLE.Forms
             this.groupBox8.Controls.Add(this.chbTcOpen);
             this.groupBox8.Location = new System.Drawing.Point(165, 48);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(142, 191);
+            this.groupBox8.Size = new System.Drawing.Size(142, 152);
             this.groupBox8.TabIndex = 11;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "TOP CON";
@@ -751,7 +687,7 @@ namespace _20260202_P2_MIDDLE.Forms
             this.groupBox9.Controls.Add(this.chbCcOpen);
             this.groupBox9.Location = new System.Drawing.Point(325, 48);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(237, 191);
+            this.groupBox9.Size = new System.Drawing.Size(237, 152);
             this.groupBox9.TabIndex = 12;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "CARTRIDGE CON";
@@ -799,627 +735,103 @@ namespace _20260202_P2_MIDDLE.Forms
             this.checkBox1.Text = "USE";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // groupBox5
-            // 
-            this.groupBox5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox5.Controls.Add(this.label28);
-            this.groupBox5.Controls.Add(this.nudC208Max);
-            this.groupBox5.Controls.Add(this.nudC208Min);
-            this.groupBox5.Controls.Add(this.label29);
-            this.groupBox5.Controls.Add(this.label26);
-            this.groupBox5.Controls.Add(this.nudL201Max);
-            this.groupBox5.Controls.Add(this.nudL201Min);
-            this.groupBox5.Controls.Add(this.label27);
-            this.groupBox5.Controls.Add(this.label24);
-            this.groupBox5.Controls.Add(this.nudC207Max);
-            this.groupBox5.Controls.Add(this.nudC207Min);
-            this.groupBox5.Controls.Add(this.label25);
-            this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.nudC204Max);
-            this.groupBox5.Controls.Add(this.nudC204Min);
-            this.groupBox5.Controls.Add(this.label23);
-            this.groupBox5.Controls.Add(this.label20);
-            this.groupBox5.Controls.Add(this.nudC203Max);
-            this.groupBox5.Controls.Add(this.nudC203Min);
-            this.groupBox5.Controls.Add(this.label21);
-            this.groupBox5.Controls.Add(this.label18);
-            this.groupBox5.Controls.Add(this.nudRT201Max);
-            this.groupBox5.Controls.Add(this.nudRT201Min);
-            this.groupBox5.Controls.Add(this.label19);
-            this.groupBox5.Controls.Add(this.label16);
-            this.groupBox5.Controls.Add(this.nudR207Max);
-            this.groupBox5.Controls.Add(this.nudR207Min);
-            this.groupBox5.Controls.Add(this.label17);
-            this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.nudR205Max);
-            this.groupBox5.Controls.Add(this.nudR205Min);
-            this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Controls.Add(this.nudR204Max);
-            this.groupBox5.Controls.Add(this.nudR204Min);
-            this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Controls.Add(this.label14);
-            this.groupBox5.Controls.Add(this.nudR203Max);
-            this.groupBox5.Controls.Add(this.nudR203Min);
-            this.groupBox5.Controls.Add(this.label15);
-            this.groupBox5.Controls.Add(this.label10);
-            this.groupBox5.Controls.Add(this.nudR202Max);
-            this.groupBox5.Controls.Add(this.nudR202Min);
-            this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Controls.Add(this.label7);
-            this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Controls.Add(this.nudPressureMax);
-            this.groupBox5.Controls.Add(this.nudPressureMin);
-            this.groupBox5.Controls.Add(this.label4);
-            this.groupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox5.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox5.Location = new System.Drawing.Point(2444, 24);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(535, 1230);
-            this.groupBox5.TabIndex = 8;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "SPEC";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(353, 464);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(26, 28);
-            this.label28.TabIndex = 51;
-            this.label28.Text = "~";
-            // 
-            // nudC208Max
-            // 
-            this.nudC208Max.Location = new System.Drawing.Point(393, 464);
-            this.nudC208Max.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudC208Max.Name = "nudC208Max";
-            this.nudC208Max.Size = new System.Drawing.Size(120, 34);
-            this.nudC208Max.TabIndex = 50;
-            // 
-            // nudC208Min
-            // 
-            this.nudC208Min.Location = new System.Drawing.Point(207, 464);
-            this.nudC208Min.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudC208Min.Name = "nudC208Min";
-            this.nudC208Min.Size = new System.Drawing.Size(120, 34);
-            this.nudC208Min.TabIndex = 49;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(15, 466);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(61, 28);
-            this.label29.TabIndex = 48;
-            this.label29.Text = "C208";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(353, 504);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(26, 28);
-            this.label26.TabIndex = 47;
-            this.label26.Text = "~";
-            // 
-            // nudL201Max
-            // 
-            this.nudL201Max.Location = new System.Drawing.Point(393, 504);
-            this.nudL201Max.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudL201Max.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.nudL201Max.Name = "nudL201Max";
-            this.nudL201Max.Size = new System.Drawing.Size(120, 34);
-            this.nudL201Max.TabIndex = 46;
-            this.nudL201Max.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            // 
-            // nudL201Min
-            // 
-            this.nudL201Min.Location = new System.Drawing.Point(207, 504);
-            this.nudL201Min.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudL201Min.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.nudL201Min.Name = "nudL201Min";
-            this.nudL201Min.Size = new System.Drawing.Size(120, 34);
-            this.nudL201Min.TabIndex = 45;
-            this.nudL201Min.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(15, 506);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(58, 28);
-            this.label27.TabIndex = 44;
-            this.label27.Text = "L201";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(353, 424);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(26, 28);
-            this.label24.TabIndex = 43;
-            this.label24.Text = "~";
-            // 
-            // nudC207Max
-            // 
-            this.nudC207Max.Location = new System.Drawing.Point(393, 424);
-            this.nudC207Max.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudC207Max.Name = "nudC207Max";
-            this.nudC207Max.Size = new System.Drawing.Size(120, 34);
-            this.nudC207Max.TabIndex = 42;
-            // 
-            // nudC207Min
-            // 
-            this.nudC207Min.Location = new System.Drawing.Point(207, 424);
-            this.nudC207Min.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudC207Min.Name = "nudC207Min";
-            this.nudC207Min.Size = new System.Drawing.Size(120, 34);
-            this.nudC207Min.TabIndex = 41;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(15, 426);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(61, 28);
-            this.label25.TabIndex = 40;
-            this.label25.Text = "C207";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(353, 384);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(26, 28);
-            this.label22.TabIndex = 39;
-            this.label22.Text = "~";
-            // 
-            // nudC204Max
-            // 
-            this.nudC204Max.Location = new System.Drawing.Point(393, 384);
-            this.nudC204Max.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudC204Max.Name = "nudC204Max";
-            this.nudC204Max.Size = new System.Drawing.Size(120, 34);
-            this.nudC204Max.TabIndex = 38;
-            // 
-            // nudC204Min
-            // 
-            this.nudC204Min.Location = new System.Drawing.Point(207, 384);
-            this.nudC204Min.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudC204Min.Name = "nudC204Min";
-            this.nudC204Min.Size = new System.Drawing.Size(120, 34);
-            this.nudC204Min.TabIndex = 37;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(15, 386);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(118, 28);
-            this.label23.TabIndex = 36;
-            this.label23.Text = "C204-C206";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(353, 344);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(26, 28);
-            this.label20.TabIndex = 35;
-            this.label20.Text = "~";
-            // 
-            // nudC203Max
-            // 
-            this.nudC203Max.Location = new System.Drawing.Point(393, 344);
-            this.nudC203Max.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudC203Max.Name = "nudC203Max";
-            this.nudC203Max.Size = new System.Drawing.Size(120, 34);
-            this.nudC203Max.TabIndex = 34;
-            // 
-            // nudC203Min
-            // 
-            this.nudC203Min.Location = new System.Drawing.Point(207, 344);
-            this.nudC203Min.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudC203Min.Name = "nudC203Min";
-            this.nudC203Min.Size = new System.Drawing.Size(120, 34);
-            this.nudC203Min.TabIndex = 33;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(15, 346);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(61, 28);
-            this.label21.TabIndex = 32;
-            this.label21.Text = "C203";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(353, 304);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(26, 28);
-            this.label18.TabIndex = 31;
-            this.label18.Text = "~";
-            // 
-            // nudRT201Max
-            // 
-            this.nudRT201Max.Location = new System.Drawing.Point(393, 304);
-            this.nudRT201Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nudRT201Max.Name = "nudRT201Max";
-            this.nudRT201Max.Size = new System.Drawing.Size(120, 34);
-            this.nudRT201Max.TabIndex = 30;
-            // 
-            // nudRT201Min
-            // 
-            this.nudRT201Min.Location = new System.Drawing.Point(207, 304);
-            this.nudRT201Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nudRT201Min.Name = "nudRT201Min";
-            this.nudRT201Min.Size = new System.Drawing.Size(120, 34);
-            this.nudRT201Min.TabIndex = 29;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(15, 306);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(73, 28);
-            this.label19.TabIndex = 28;
-            this.label19.Text = "RT201";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(353, 264);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(26, 28);
-            this.label16.TabIndex = 27;
-            this.label16.Text = "~";
-            // 
-            // nudR207Max
-            // 
-            this.nudR207Max.Location = new System.Drawing.Point(393, 264);
-            this.nudR207Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nudR207Max.Name = "nudR207Max";
-            this.nudR207Max.Size = new System.Drawing.Size(120, 34);
-            this.nudR207Max.TabIndex = 26;
-            // 
-            // nudR207Min
-            // 
-            this.nudR207Min.Location = new System.Drawing.Point(207, 264);
-            this.nudR207Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nudR207Min.Name = "nudR207Min";
-            this.nudR207Min.Size = new System.Drawing.Size(120, 34);
-            this.nudR207Min.TabIndex = 25;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(15, 266);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 28);
-            this.label17.TabIndex = 24;
-            this.label17.Text = "R207";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(353, 224);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(26, 28);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "~";
-            // 
-            // nudR205Max
-            // 
-            this.nudR205Max.Location = new System.Drawing.Point(393, 224);
-            this.nudR205Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nudR205Max.Name = "nudR205Max";
-            this.nudR205Max.Size = new System.Drawing.Size(120, 34);
-            this.nudR205Max.TabIndex = 22;
-            // 
-            // nudR205Min
-            // 
-            this.nudR205Min.Location = new System.Drawing.Point(207, 224);
-            this.nudR205Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nudR205Min.Name = "nudR205Min";
-            this.nudR205Min.Size = new System.Drawing.Size(120, 34);
-            this.nudR205Min.TabIndex = 21;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(15, 226);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 28);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "R205";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(353, 184);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(26, 28);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "~";
-            // 
-            // nudR204Max
-            // 
-            this.nudR204Max.Location = new System.Drawing.Point(393, 184);
-            this.nudR204Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nudR204Max.Name = "nudR204Max";
-            this.nudR204Max.Size = new System.Drawing.Size(120, 34);
-            this.nudR204Max.TabIndex = 18;
-            // 
-            // nudR204Min
-            // 
-            this.nudR204Min.Location = new System.Drawing.Point(207, 184);
-            this.nudR204Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nudR204Min.Name = "nudR204Min";
-            this.nudR204Min.Size = new System.Drawing.Size(120, 34);
-            this.nudR204Min.TabIndex = 17;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 186);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 28);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "R204";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(353, 144);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(26, 28);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "~";
-            // 
-            // nudR203Max
-            // 
-            this.nudR203Max.Location = new System.Drawing.Point(393, 144);
-            this.nudR203Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nudR203Max.Name = "nudR203Max";
-            this.nudR203Max.Size = new System.Drawing.Size(120, 34);
-            this.nudR203Max.TabIndex = 14;
-            // 
-            // nudR203Min
-            // 
-            this.nudR203Min.Location = new System.Drawing.Point(207, 144);
-            this.nudR203Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nudR203Min.Name = "nudR203Min";
-            this.nudR203Min.Size = new System.Drawing.Size(120, 34);
-            this.nudR203Min.TabIndex = 13;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(15, 146);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(61, 28);
-            this.label15.TabIndex = 12;
-            this.label15.Text = "R203";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(353, 104);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(26, 28);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "~";
-            // 
-            // nudR202Max
-            // 
-            this.nudR202Max.Location = new System.Drawing.Point(393, 104);
-            this.nudR202Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nudR202Max.Name = "nudR202Max";
-            this.nudR202Max.Size = new System.Drawing.Size(120, 34);
-            this.nudR202Max.TabIndex = 8;
-            // 
-            // nudR202Min
-            // 
-            this.nudR202Min.Location = new System.Drawing.Point(207, 104);
-            this.nudR202Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nudR202Min.Name = "nudR202Min";
-            this.nudR202Min.Size = new System.Drawing.Size(120, 34);
-            this.nudR202Min.TabIndex = 7;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 106);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 28);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "R202";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(422, 21);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 28);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "MAX";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(231, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 28);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "MIN";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(353, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 28);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "~";
-            // 
-            // nudPressureMax
-            // 
-            this.nudPressureMax.Location = new System.Drawing.Point(393, 64);
-            this.nudPressureMax.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.nudPressureMax.Name = "nudPressureMax";
-            this.nudPressureMax.Size = new System.Drawing.Size(120, 34);
-            this.nudPressureMax.TabIndex = 2;
-            // 
-            // nudPressureMin
-            // 
-            this.nudPressureMin.Location = new System.Drawing.Point(207, 64);
-            this.nudPressureMin.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.nudPressureMin.Name = "nudPressureMin";
-            this.nudPressureMin.Size = new System.Drawing.Size(120, 34);
-            this.nudPressureMin.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 28);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "PRESSURE";
+            // grbSpec
+            // 
+            this.grbSpec.Controls.Add(this.dataGridView4);
+            this.grbSpec.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.grbSpec.Location = new System.Drawing.Point(25, 1029);
+            this.grbSpec.Name = "grbSpec";
+            this.grbSpec.Size = new System.Drawing.Size(2403, 354);
+            this.grbSpec.TabIndex = 9;
+            this.grbSpec.TabStop = false;
+            this.grbSpec.Text = "SPEC";
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.No,
+            this.TEST,
+            this.JUDGMENT,
+            this.ITEM,
+            this.SETTING,
+            this.MIN,
+            this.MAX});
+            this.dataGridView4.Location = new System.Drawing.Point(6, 33);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersWidth = 62;
+            this.dataGridView4.RowTemplate.Height = 30;
+            this.dataGridView4.Size = new System.Drawing.Size(1418, 306);
+            this.dataGridView4.TabIndex = 4;
+            // 
+            // No
+            // 
+            this.No.HeaderText = "No";
+            this.No.MinimumWidth = 8;
+            this.No.Name = "No";
+            this.No.Width = 150;
+            // 
+            // TEST
+            // 
+            this.TEST.HeaderText = "TEST";
+            this.TEST.MinimumWidth = 8;
+            this.TEST.Name = "TEST";
+            this.TEST.Width = 150;
+            // 
+            // JUDGMENT
+            // 
+            this.JUDGMENT.HeaderText = "JUDGMENT";
+            this.JUDGMENT.MinimumWidth = 8;
+            this.JUDGMENT.Name = "JUDGMENT";
+            this.JUDGMENT.Width = 150;
+            // 
+            // ITEM
+            // 
+            this.ITEM.HeaderText = "ITEM";
+            this.ITEM.MinimumWidth = 8;
+            this.ITEM.Name = "ITEM";
+            this.ITEM.Width = 150;
+            // 
+            // SETTING
+            // 
+            this.SETTING.HeaderText = "SETTING";
+            this.SETTING.MinimumWidth = 8;
+            this.SETTING.Name = "SETTING";
+            this.SETTING.Width = 150;
+            // 
+            // MIN
+            // 
+            this.MIN.HeaderText = "MIN";
+            this.MIN.MinimumWidth = 8;
+            this.MIN.Name = "MIN";
+            this.MIN.Width = 150;
+            // 
+            // MAX
+            // 
+            this.MAX.HeaderText = "MAX";
+            this.MAX.MinimumWidth = 8;
+            this.MAX.Name = "MAX";
+            this.MAX.Width = 150;
             // 
             // RecipeSettingForm
             // 
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(3072, 1470);
-            this.Controls.Add(this.groupBox5);
+            this.ClientSize = new System.Drawing.Size(2448, 1385);
+            this.Controls.Add(this.grbSpec);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.grboxOS);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RecipeSettingForm";
-            this.Text = "Form1";
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.Text = "Setting";
+            this.grboxOS.ResumeLayout(false);
+            this.GboxCon3.ResumeLayout(false);
+            this.GboxCon3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberCon3)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.GboxCon2.ResumeLayout(false);
+            this.GboxCon2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberCon2)).EndInit();
             this.GboxCon1.ResumeLayout(false);
@@ -1448,40 +860,16 @@ namespace _20260202_P2_MIDDLE.Forms
             this.groupBox9.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC208Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC208Min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudL201Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudL201Min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC207Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC207Min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC204Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC204Min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC203Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudC203Min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRT201Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRT201Min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR207Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR207Min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR205Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR205Min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR204Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR204Min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR203Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR203Min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR202Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudR202Min)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPressureMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPressureMin)).EndInit();
+            this.grbSpec.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grboxOS;
+        private System.Windows.Forms.GroupBox GboxCon3;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
@@ -1490,7 +878,7 @@ namespace _20260202_P2_MIDDLE.Forms
         private System.Windows.Forms.NumericUpDown NumberCon3;
         private System.Windows.Forms.Button BtnCon3Set;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox GboxCon2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -1518,56 +906,6 @@ namespace _20260202_P2_MIDDLE.Forms
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.CheckBox chbMcShort;
         private System.Windows.Forms.CheckBox chbMcOpen;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.NumericUpDown nudL201Max;
-        private System.Windows.Forms.NumericUpDown nudL201Min;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.NumericUpDown nudC207Max;
-        private System.Windows.Forms.NumericUpDown nudC207Min;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.NumericUpDown nudC204Max;
-        private System.Windows.Forms.NumericUpDown nudC204Min;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.NumericUpDown nudC203Max;
-        private System.Windows.Forms.NumericUpDown nudC203Min;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.NumericUpDown nudRT201Max;
-        private System.Windows.Forms.NumericUpDown nudRT201Min;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.NumericUpDown nudR207Max;
-        private System.Windows.Forms.NumericUpDown nudR207Min;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.NumericUpDown nudR205Max;
-        private System.Windows.Forms.NumericUpDown nudR205Min;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown nudR204Max;
-        private System.Windows.Forms.NumericUpDown nudR204Min;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.NumericUpDown nudR203Max;
-        private System.Windows.Forms.NumericUpDown nudR203Min;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown nudR202Max;
-        private System.Windows.Forms.NumericUpDown nudR202Min;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown nudPressureMax;
-        private System.Windows.Forms.NumericUpDown nudPressureMin;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.NumericUpDown nudC208Max;
-        private System.Windows.Forms.NumericUpDown nudC208Min;
-        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox groupBox18;
@@ -1583,10 +921,18 @@ namespace _20260202_P2_MIDDLE.Forms
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox chbRLC_c;
+        private System.Windows.Forms.CheckBox chbRLC_l;
+        private System.Windows.Forms.CheckBox chbRLC_r;
         private System.Windows.Forms.GroupBox grbOSTest;
-        internal System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox grbSpec;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn No;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TEST;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JUDGMENT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ITEM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SETTING;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MIN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAX;
     }
 }
