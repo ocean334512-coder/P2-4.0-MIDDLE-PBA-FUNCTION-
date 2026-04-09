@@ -1,0 +1,36 @@
+---
+description: P2 4.0 TOP PBA 프로젝트 작업 맥락 및 최근 변경 (2026-04-10 기준)
+alwaysApply: true
+---
+
+# P2 4.0 TOP PBA — 작업 맥락
+
+## 솔루션·프로젝트
+
+- 솔루션: `P2 4.0 TOP PBA FUNCTION.sln`
+- 프로젝트 파일: `20260202_P2 MIDDLE/P2 4.0 TOP PBA FUNCTION.csproj` (.NET Framework 4.7.2, WinForms)
+- 이전 이름: `20260202_P2 MIDDLE.sln` / `20260202_P2 MIDDLE.csproj` (삭제·이름 변경됨)
+
+## 메인 폼
+
+- `Forms/MainForm.cs` + `MainForm.Designer.cs`: 클래스명은 **`Form1`** (`namespace _20260202_P2_MIDDLE`)
+- `MainForm.resx`에 `PboxITM.Image` 등 리소스 포함. 디자이너 오류 시 `.resx` 손상·캐시(.vs/bin/obj) 의심
+
+## 설정 폼 (Recipe)
+
+- 파일: `Forms/SettingForm.cs`, `SettingForm.Designer.cs`, `SettingForm.resx`
+- **클래스명은 `RecipeSettingForm`** (파일명만 SettingForm)
+- **2026-04-10:** 생성자에 `LicenseManager.UsageMode == Designtime` 이면 즉시 return — 디자이너에서 `InitializeDataGridView` / `LoadSettings` / `FormClosing` 등 런타임 초기화가 돌지 않게 함
+
+## 기타 폼
+
+- `ComSettingForm`, `SerialSettingsDialog`, `IpSettingsDialog` 등은 `Forms/` 아래
+
+## Git
+
+- **2026-04-10 커밋:** `8a14bde` — 위 프로젝트명 변경, 폼/통신 수정, RecipeSettingForm 디자이너 가드 포함
+
+## 작업 시 권장
+
+- WinForms 디자이너 문제: 해당 폼 `.resx` XML 확인, `ResXResourceReader` 경로, 필요 시 `.vs`·`bin`·`obj` 정리
+- `SettingForm` 편집 시 디자이너는 `RecipeSettingForm` 기준으로 열 것
