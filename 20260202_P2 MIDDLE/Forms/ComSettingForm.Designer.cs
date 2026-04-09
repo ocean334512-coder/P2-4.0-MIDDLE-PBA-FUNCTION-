@@ -263,7 +263,7 @@ namespace _20260202_P2_MIDDLE.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1345, 777);
+            this.ClientSize = new System.Drawing.Size(1360, 802);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btnComCancel);
             this.Controls.Add(this.btnComSave);

@@ -15,7 +15,6 @@ namespace _20260202_P2_MIDDLE.Communications
         private TcpClient _client;
         private NetworkStream _stream;
         private readonly object _lock = new object();
-
         private readonly string _ip;
         private readonly int _port;
         private const int DEFAULT_TIMEOUT_MS = 5000;

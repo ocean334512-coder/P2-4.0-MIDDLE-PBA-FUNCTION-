@@ -30,6 +30,7 @@ namespace _20260202_P2_MIDDLE
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -53,15 +54,12 @@ namespace _20260202_P2_MIDDLE
             this.lblClearJigComm = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnManualOpen = new System.Windows.Forms.Button();
-            this.btnCalibrationOpen = new System.Windows.Forms.Button();
             this.btnRecipeSettingsOpen = new System.Windows.Forms.Button();
             this.btnComSettingsOpen = new System.Windows.Forms.Button();
             this.lblValueModel = new System.Windows.Forms.Label();
             this.lblTextModel = new System.Windows.Forms.Label();
             this.lblValueLotNo = new System.Windows.Forms.Label();
             this.lblTextLotNo = new System.Windows.Forms.Label();
-            this.lblValueMcuNo = new System.Windows.Forms.Label();
-            this.lblTextMcuNo = new System.Windows.Forms.Label();
             this.PboxITM = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -108,6 +106,7 @@ namespace _20260202_P2_MIDDLE
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Gray;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.groupBox1, 0, 1);
@@ -127,7 +126,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(2939, 1447);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(2564, 1447);
             this.tableLayoutPanel2.TabIndex = 1;
             this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint_1);
             // 
@@ -140,7 +139,7 @@ namespace _20260202_P2_MIDDLE
             this.groupBox1.Margin = new System.Windows.Forms.Padding(41, 8, 41, 18);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.groupBox1.Size = new System.Drawing.Size(2857, 95);
+            this.groupBox1.Size = new System.Drawing.Size(2482, 95);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Recipe";
@@ -164,17 +163,17 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(2845, 58);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(2470, 58);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Honeydew;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1246, 0);
+            this.label2.Location = new System.Drawing.Point(1096, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 58);
@@ -185,7 +184,7 @@ namespace _20260202_P2_MIDDLE
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Honeydew;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -205,10 +204,10 @@ namespace _20260202_P2_MIDDLE
             this.btnRecipeOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnRecipeOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnRecipeOpen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecipeOpen.Location = new System.Drawing.Point(2570, 0);
+            this.btnRecipeOpen.Location = new System.Drawing.Point(2240, 0);
             this.btnRecipeOpen.Margin = new System.Windows.Forms.Padding(6, 0, 6, 8);
             this.btnRecipeOpen.Name = "btnRecipeOpen";
-            this.btnRecipeOpen.Size = new System.Drawing.Size(269, 50);
+            this.btnRecipeOpen.Size = new System.Drawing.Size(224, 50);
             this.btnRecipeOpen.TabIndex = 8;
             this.btnRecipeOpen.Text = "Select Recipe";
             this.btnRecipeOpen.UseVisualStyleBackColor = false;
@@ -222,7 +221,7 @@ namespace _20260202_P2_MIDDLE
             this.tboxRecipeFile.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
             this.tboxRecipeFile.Multiline = false;
             this.tboxRecipeFile.Name = "tboxRecipeFile";
-            this.tboxRecipeFile.Size = new System.Drawing.Size(925, 58);
+            this.tboxRecipeFile.Size = new System.Drawing.Size(775, 58);
             this.tboxRecipeFile.TabIndex = 9;
             this.tboxRecipeFile.Text = "";
             // 
@@ -231,11 +230,11 @@ namespace _20260202_P2_MIDDLE
             this.tboxRecipeFilePath.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tboxRecipeFilePath.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tboxRecipeFilePath.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxRecipeFilePath.Location = new System.Drawing.Point(1443, 0);
+            this.tboxRecipeFilePath.Location = new System.Drawing.Point(1293, 0);
             this.tboxRecipeFilePath.Margin = new System.Windows.Forms.Padding(0, 0, 9, 0);
             this.tboxRecipeFilePath.Multiline = false;
             this.tboxRecipeFilePath.Name = "tboxRecipeFilePath";
-            this.tboxRecipeFilePath.Size = new System.Drawing.Size(1112, 58);
+            this.tboxRecipeFilePath.Size = new System.Drawing.Size(932, 58);
             this.tboxRecipeFilePath.TabIndex = 10;
             this.tboxRecipeFilePath.Text = "";
             // 
@@ -247,7 +246,7 @@ namespace _20260202_P2_MIDDLE
             this.groupBox6.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.groupBox6.Size = new System.Drawing.Size(2927, 359);
+            this.groupBox6.Size = new System.Drawing.Size(2552, 359);
             this.groupBox6.TabIndex = 7;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Communication";
@@ -261,7 +260,7 @@ namespace _20260202_P2_MIDDLE
             this.tabControl5.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(2915, 332);
+            this.tabControl5.Size = new System.Drawing.Size(2540, 332);
             this.tabControl5.TabIndex = 0;
             // 
             // tabPage13
@@ -271,7 +270,7 @@ namespace _20260202_P2_MIDDLE
             this.tabPage13.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tabPage13.Size = new System.Drawing.Size(2907, 300);
+            this.tabPage13.Size = new System.Drawing.Size(2532, 300);
             this.tabPage13.TabIndex = 0;
             this.tabPage13.Text = "Log";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -290,7 +289,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel22.RowCount = 2;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(2895, 294);
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(2520, 294);
             this.tableLayoutPanel22.TabIndex = 1;
             // 
             // tboxJigLog
@@ -301,7 +300,7 @@ namespace _20260202_P2_MIDDLE
             this.tboxJigLog.Location = new System.Drawing.Point(6, 39);
             this.tboxJigLog.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tboxJigLog.Name = "tboxJigLog";
-            this.tboxJigLog.Size = new System.Drawing.Size(2883, 252);
+            this.tboxJigLog.Size = new System.Drawing.Size(2508, 252);
             this.tboxJigLog.TabIndex = 2;
             this.tboxJigLog.Text = "";
             // 
@@ -309,7 +308,7 @@ namespace _20260202_P2_MIDDLE
             // 
             this.lblClearJigLog.AutoSize = true;
             this.lblClearJigLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblClearJigLog.Location = new System.Drawing.Point(2758, 0);
+            this.lblClearJigLog.Location = new System.Drawing.Point(2383, 0);
             this.lblClearJigLog.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblClearJigLog.Name = "lblClearJigLog";
             this.lblClearJigLog.Size = new System.Drawing.Size(131, 36);
@@ -374,7 +373,7 @@ namespace _20260202_P2_MIDDLE
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.Gray;
             this.tableLayoutPanel3.ColumnCount = 11;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 611F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.838754F));
@@ -388,15 +387,12 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.838754F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.838754F));
             this.tableLayoutPanel3.Controls.Add(this.btnManualOpen, 10, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnCalibrationOpen, 9, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnRecipeSettingsOpen, 8, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnComSettingsOpen, 7, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblValueModel, 6, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblTextModel, 5, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblValueLotNo, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblTextLotNo, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lblValueMcuNo, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lblTextMcuNo, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.PboxITM, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
@@ -404,7 +400,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(2939, 105);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(2564, 105);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // btnManualOpen
@@ -415,29 +411,13 @@ namespace _20260202_P2_MIDDLE
             this.btnManualOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnManualOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnManualOpen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnManualOpen.Location = new System.Drawing.Point(2728, 10);
+            this.btnManualOpen.Location = new System.Drawing.Point(2389, 10);
             this.btnManualOpen.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.btnManualOpen.Name = "btnManualOpen";
-            this.btnManualOpen.Size = new System.Drawing.Size(191, 85);
+            this.btnManualOpen.Size = new System.Drawing.Size(155, 85);
             this.btnManualOpen.TabIndex = 11;
             this.btnManualOpen.Text = "Manual";
             this.btnManualOpen.UseVisualStyleBackColor = false;
-            // 
-            // btnCalibrationOpen
-            // 
-            this.btnCalibrationOpen.BackColor = System.Drawing.Color.White;
-            this.btnCalibrationOpen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCalibrationOpen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCalibrationOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnCalibrationOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnCalibrationOpen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCalibrationOpen.Location = new System.Drawing.Point(2499, 10);
-            this.btnCalibrationOpen.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.btnCalibrationOpen.Name = "btnCalibrationOpen";
-            this.btnCalibrationOpen.Size = new System.Drawing.Size(189, 85);
-            this.btnCalibrationOpen.TabIndex = 10;
-            this.btnCalibrationOpen.Text = "Calibration";
-            this.btnCalibrationOpen.UseVisualStyleBackColor = false;
             // 
             // btnRecipeSettingsOpen
             // 
@@ -447,12 +427,12 @@ namespace _20260202_P2_MIDDLE
             this.btnRecipeSettingsOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnRecipeSettingsOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnRecipeSettingsOpen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRecipeSettingsOpen.Location = new System.Drawing.Point(2270, 10);
+            this.btnRecipeSettingsOpen.Location = new System.Drawing.Point(2005, 10);
             this.btnRecipeSettingsOpen.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.btnRecipeSettingsOpen.Name = "btnRecipeSettingsOpen";
-            this.btnRecipeSettingsOpen.Size = new System.Drawing.Size(189, 85);
+            this.btnRecipeSettingsOpen.Size = new System.Drawing.Size(152, 85);
             this.btnRecipeSettingsOpen.TabIndex = 9;
-            this.btnRecipeSettingsOpen.Text = "Setting";
+            this.btnRecipeSettingsOpen.Text = "SETTING";
             this.btnRecipeSettingsOpen.UseVisualStyleBackColor = false;
             this.btnRecipeSettingsOpen.Click += new System.EventHandler(this.btnSettingsOpen_Click_1);
             // 
@@ -464,12 +444,12 @@ namespace _20260202_P2_MIDDLE
             this.btnComSettingsOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnComSettingsOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnComSettingsOpen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnComSettingsOpen.Location = new System.Drawing.Point(2041, 10);
+            this.btnComSettingsOpen.Location = new System.Drawing.Point(1813, 10);
             this.btnComSettingsOpen.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.btnComSettingsOpen.Name = "btnComSettingsOpen";
-            this.btnComSettingsOpen.Size = new System.Drawing.Size(189, 85);
+            this.btnComSettingsOpen.Size = new System.Drawing.Size(152, 85);
             this.btnComSettingsOpen.TabIndex = 8;
-            this.btnComSettingsOpen.Text = "COM Settings";
+            this.btnComSettingsOpen.Text = "COM SETTING";
             this.btnComSettingsOpen.UseVisualStyleBackColor = false;
             this.btnComSettingsOpen.Click += new System.EventHandler(this.btnComSettingsOpen_Click_1);
             // 
@@ -480,10 +460,10 @@ namespace _20260202_P2_MIDDLE
             this.lblValueModel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblValueModel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblValueModel.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValueModel.Location = new System.Drawing.Point(1800, 21);
+            this.lblValueModel.Location = new System.Drawing.Point(1611, 21);
             this.lblValueModel.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblValueModel.Name = "lblValueModel";
-            this.lblValueModel.Size = new System.Drawing.Size(201, 63);
+            this.lblValueModel.Size = new System.Drawing.Size(162, 63);
             this.lblValueModel.TabIndex = 7;
             this.lblValueModel.Text = "-";
             this.lblValueModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -495,12 +475,12 @@ namespace _20260202_P2_MIDDLE
             this.lblTextModel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTextModel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTextModel.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTextModel.Location = new System.Drawing.Point(1571, 21);
+            this.lblTextModel.Location = new System.Drawing.Point(1419, 21);
             this.lblTextModel.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblTextModel.Name = "lblTextModel";
-            this.lblTextModel.Size = new System.Drawing.Size(189, 63);
+            this.lblTextModel.Size = new System.Drawing.Size(152, 63);
             this.lblTextModel.TabIndex = 6;
-            this.lblTextModel.Text = "Model";
+            this.lblTextModel.Text = "MODEL";
             this.lblTextModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblValueLotNo
@@ -510,10 +490,10 @@ namespace _20260202_P2_MIDDLE
             this.lblValueLotNo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblValueLotNo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblValueLotNo.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValueLotNo.Location = new System.Drawing.Point(1330, 21);
+            this.lblValueLotNo.Location = new System.Drawing.Point(1217, 21);
             this.lblValueLotNo.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblValueLotNo.Name = "lblValueLotNo";
-            this.lblValueLotNo.Size = new System.Drawing.Size(201, 63);
+            this.lblValueLotNo.Size = new System.Drawing.Size(162, 63);
             this.lblValueLotNo.TabIndex = 5;
             this.lblValueLotNo.Text = "-";
             this.lblValueLotNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -525,49 +505,20 @@ namespace _20260202_P2_MIDDLE
             this.lblTextLotNo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTextLotNo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTextLotNo.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTextLotNo.Location = new System.Drawing.Point(1101, 21);
+            this.lblTextLotNo.Location = new System.Drawing.Point(1025, 21);
             this.lblTextLotNo.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.lblTextLotNo.Name = "lblTextLotNo";
-            this.lblTextLotNo.Size = new System.Drawing.Size(189, 63);
+            this.lblTextLotNo.Size = new System.Drawing.Size(152, 63);
             this.lblTextLotNo.TabIndex = 4;
-            this.lblTextLotNo.Text = "Lot No.";
+            this.lblTextLotNo.Text = "LOT No.";
             this.lblTextLotNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblValueMcuNo
-            // 
-            this.lblValueMcuNo.AutoSize = true;
-            this.lblValueMcuNo.BackColor = System.Drawing.Color.Honeydew;
-            this.lblValueMcuNo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblValueMcuNo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblValueMcuNo.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValueMcuNo.Location = new System.Drawing.Point(860, 21);
-            this.lblValueMcuNo.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
-            this.lblValueMcuNo.Name = "lblValueMcuNo";
-            this.lblValueMcuNo.Size = new System.Drawing.Size(201, 63);
-            this.lblValueMcuNo.TabIndex = 3;
-            this.lblValueMcuNo.Text = "-";
-            this.lblValueMcuNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTextMcuNo
-            // 
-            this.lblTextMcuNo.AutoSize = true;
-            this.lblTextMcuNo.BackColor = System.Drawing.Color.MintCream;
-            this.lblTextMcuNo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTextMcuNo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTextMcuNo.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTextMcuNo.Location = new System.Drawing.Point(631, 21);
-            this.lblTextMcuNo.Margin = new System.Windows.Forms.Padding(20, 21, 20, 21);
-            this.lblTextMcuNo.Name = "lblTextMcuNo";
-            this.lblTextMcuNo.Size = new System.Drawing.Size(189, 63);
-            this.lblTextMcuNo.TabIndex = 2;
-            this.lblTextMcuNo.Text = "Mcu No.";
-            this.lblTextMcuNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PboxITM
             // 
             this.PboxITM.BackColor = System.Drawing.Color.White;
             this.PboxITM.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PboxITM.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PboxITM.Image = ((System.Drawing.Image)(resources.GetObject("PboxITM.Image")));
             this.PboxITM.Location = new System.Drawing.Point(11, 10);
             this.PboxITM.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.PboxITM.Name = "PboxITM";
@@ -595,7 +546,7 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.44304F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.55696F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(2931, 837);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(2556, 837);
             this.tableLayoutPanel5.TabIndex = 9;
             // 
             // tabControl1
@@ -606,7 +557,7 @@ namespace _20260202_P2_MIDDLE
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0, 18, 0, 18);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(2344, 714);
+            this.tabControl1.Size = new System.Drawing.Size(2044, 714);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
@@ -616,7 +567,7 @@ namespace _20260202_P2_MIDDLE
             this.tabPage1.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.tabPage1.Size = new System.Drawing.Size(2336, 682);
+            this.tabPage1.Size = new System.Drawing.Size(2036, 682);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "TaskList";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -658,7 +609,7 @@ namespace _20260202_P2_MIDDLE
             this.dgvTaskList.RowHeadersVisible = false;
             this.dgvTaskList.RowHeadersWidth = 51;
             this.dgvTaskList.RowTemplate.Height = 27;
-            this.dgvTaskList.Size = new System.Drawing.Size(2324, 676);
+            this.dgvTaskList.Size = new System.Drawing.Size(2024, 676);
             this.dgvTaskList.TabIndex = 0;
             // 
             // Column1
@@ -689,26 +640,26 @@ namespace _20260202_P2_MIDDLE
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button4.Location = new System.Drawing.Point(2641, 4);
+            this.button4.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button4.Location = new System.Drawing.Point(2303, 4);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(286, 79);
+            this.button4.Size = new System.Drawing.Size(249, 79);
             this.button4.TabIndex = 16;
-            this.button4.Text = "Stop";
+            this.button4.Text = "STOP";
             this.button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button3.Location = new System.Drawing.Point(2348, 4);
+            this.button3.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button3.Location = new System.Drawing.Point(2048, 4);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(285, 79);
+            this.button3.Size = new System.Drawing.Size(247, 79);
             this.button3.TabIndex = 15;
-            this.button3.Text = "Start";
+            this.button3.Text = "START";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // lblResult
@@ -719,7 +670,7 @@ namespace _20260202_P2_MIDDLE
             this.lblResult.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblResult.Location = new System.Drawing.Point(3, 0);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(2338, 87);
+            this.lblResult.Size = new System.Drawing.Size(2038, 87);
             this.lblResult.TabIndex = 18;
             this.lblResult.Text = "-";
             // 
@@ -730,12 +681,12 @@ namespace _20260202_P2_MIDDLE
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(2347, 90);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(2047, 90);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 744F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(581, 744);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(506, 744);
             this.tableLayoutPanel6.TabIndex = 19;
             // 
             // contextMenuStrip1
@@ -748,7 +699,7 @@ namespace _20260202_P2_MIDDLE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2939, 1447);
+            this.ClientSize = new System.Drawing.Size(2564, 1447);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
@@ -794,15 +745,12 @@ namespace _20260202_P2_MIDDLE
         private System.Windows.Forms.LinkLabel lblClearJigComm;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button btnManualOpen;
-        private System.Windows.Forms.Button btnCalibrationOpen;
         private System.Windows.Forms.Button btnRecipeSettingsOpen;
         private System.Windows.Forms.Button btnComSettingsOpen;
         public System.Windows.Forms.Label lblValueModel;
         private System.Windows.Forms.Label lblTextModel;
         public System.Windows.Forms.Label lblValueLotNo;
         private System.Windows.Forms.Label lblTextLotNo;
-        public System.Windows.Forms.Label lblValueMcuNo;
-        private System.Windows.Forms.Label lblTextMcuNo;
         private System.Windows.Forms.PictureBox PboxITM;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;

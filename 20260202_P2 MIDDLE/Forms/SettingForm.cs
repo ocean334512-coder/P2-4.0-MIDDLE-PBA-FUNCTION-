@@ -24,6 +24,11 @@ namespace _20260202_P2_MIDDLE.Forms
         {
             InitializeComponent();
 
+            if (IsInDesignMode())
+            {
+                return;
+            }
+
             // DataGridView 열 구성
             InitializeDataGridView();
 
@@ -32,6 +37,11 @@ namespace _20260202_P2_MIDDLE.Forms
 
             // 폼 닫을 때 자동 저장
             this.FormClosing += RecipeSettingForm_FormClosing;
+        }
+
+        private static bool IsInDesignMode()
+        {
+            return LicenseManager.UsageMode == LicenseUsageMode.Designtime;
         }
 
         #region DataGridView 초기화 및 행 생성
